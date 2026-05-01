@@ -1,51 +1,125 @@
-site_name: METR - Ontology
-site_description: A registry for documenting the ontology of METR terms
-repo_url: https://github.com/k-vaughn/ontology-metr
+site_name: ITS Ontology - Location
+site_description: A registry for documenting the ontology of ITS Location terms
+repo_url: https://github.com/ISO-TC204/ontology-its-location-v1
 nav:
 - Home: index.md
-- Ontology for ITS Location Referencing:
-  - Location Pattern (itsLocation):
-    - Area Destination: classes/itsLocation__AreaDestination.md
-    - Area Location: classes/itsLocation__AreaLocation.md
-    - Destination: classes/itsLocation__Destination.md
-    - Indexed Location: classes/itsLocation__IndexedLocation.md
-    - Itinerary: classes/itsLocation__Itinerary.md
-    - Itinerary By Indexed Locations: classes/itsLocation__ItineraryByIndexedLocations.md
-    - Jurisdictional Entity: classes/itsLocation__JurisdictionalEntity.md
-    - Linear Location: classes/itsLocation__LinearLocation.md
-    - Location: classes/itsLocation__Location.md
-    - Location Group: classes/itsLocation__LocationGroup.md
-    - Location Group By List: classes/itsLocation__LocationGroupByList.md
-    - Location Reference (itsLocation): classes/itsLocation__LocationReference.md
-    - Location Thing: classes/itsLocation__LocationThing.md
-    - Named Area: classes/itsLocation__NamedArea.md
-    - Network Location: classes/itsLocation__NetworkLocation.md
-    - Point Coordinates: classes/itsLocation__PointCoordinates.md
-    - Point Destination: classes/itsLocation__PointDestination.md
-    - Point Location: classes/itsLocation__PointLocation.md
-    - Position Confidence Ellipse: classes/itsLocation__PositionConfidenceEllipse.md
-    - Supplementary Positional Description: classes/itsLocation__SupplementaryPositionalDescription.md
-- OpenLR Ontology:
-  - Circle Location Reference (OpenLR): classes/OpenLR__CircleLocationReference.md
-  - Closed Line Location Reference (OpenLR): classes/OpenLR__ClosedLineLocationReference.md
-  - Coordinates (OpenLR): classes/OpenLR__Coordinates.md
-  - Form Of Way (OpenLR): classes/OpenLR__FormOfWay.md
-  - Functional Road Class (OpenLR): classes/OpenLR__FunctionalRoadClass.md
-  - Geo Coordinate Location Reference (OpenLR): classes/OpenLR__GeoCoordinateLocationReference.md
-  - Grid Location Reference (OpenLR): classes/OpenLR__GridLocationReference.md
-  - Line Attributes (OpenLR): classes/OpenLR__LineAttributes.md
-  - Line Location Reference (OpenLR): classes/OpenLR__LineLocationReference.md
-  - Location Reference (OpenLR): classes/OpenLR__LocationReference.md
-  - Location Reference Point (OpenLR): classes/OpenLR__LocationReferencePoint.md
-  - Open LR Thing (OpenLR): classes/OpenLR__OpenLRThing.md
-  - Orientation (OpenLR): classes/OpenLR__Orientation.md
-  - Path Attributes (OpenLR): classes/OpenLR__PathAttributes.md
-  - Point Along Line Location Reference (OpenLR): classes/OpenLR__PointAlongLineLocationReference.md
-  - Poi With Access Point Location Reference (OpenLR): classes/OpenLR__PoiWithAccessPointLocationReference.md
-  - Polygon Location Reference (OpenLR): classes/OpenLR__PolygonLocationReference.md
-  - Rectangle Location Reference (OpenLR): classes/OpenLR__RectangleLocationReference.md
-  - Side Of Road (OpenLR): classes/OpenLR__SideOfRoad.md
-site_url: https://github.com/k-vaughn/ontology-metr
+- Area Pattern:
+  - Area Pattern Overview: classes/AreaPattern.md
+  - Classes:
+    - Area By Circle: classes/AreaByCircle.md
+    - Area By Code: classes/AreaByCode.md
+    - Area By Grid: classes/AreaByGrid.md
+    - Area By Linear Boundaries: classes/AreaByLinearBoundaries.md
+    - Area By Multi Polygon: classes/AreaByMultiPolygon.md
+    - Area By Polygon: classes/AreaByPolygon.md
+    - Area By Rectangle: classes/AreaByRectangle.md
+    - Area Location: classes/AreaLocation.md
+    - Area Representation: classes/AreaRepresentation.md
+  - Properties:
+    - hasCenter: properties/hasCenter.md
+    - hasLinearBoundary: properties/hasLinearBoundary.md
+    - hasLowerLeft: properties/hasLowerLeft.md
+    - hasUpperRight: properties/hasUpperRight.md
+    - numColumns: properties/numColumns.md
+    - numRows: properties/numRows.md
+    - radius: properties/radius.md
+- Core Pattern:
+  - Core Pattern Overview: classes/LocationCorePattern.md
+  - Classes:
+    - Coordinate Geometry: classes/CoordinateGeometry.md
+    - Coordinate Reference System: classes/CoordinateReferenceSystem.md
+    - Feature: classes/Feature.md
+    - Geometry: classes/Geometry.md
+    - Location: classes/Location.md
+    - Location Code: classes/LocationCode.md
+    - Location Group: classes/LocationGroup.md
+    - Location Thing: classes/LocationThing.md
+    - Spatial Location: classes/SpatialLocation.md
+    - Spatial Object: classes/SpatialObject.md
+  - Properties:
+    - coordinateEpoch: properties/coordinateEpoch.md
+    - geometryOf: properties/geometryOf.md
+    - hasAlternativeRepresentation: properties/hasAlternativeRepresentation.md
+    - hasCRS: properties/hasCRS.md
+    - hasMember: properties/hasMember.md
+    - hasPrimaryRepresentation: properties/hasPrimaryRepresentation.md
+    - LocationDataProperty: properties/LocationDataProperty.md
+    - LocationObjectProperty: properties/LocationObjectProperty.md
+- Itinerary Pattern:
+  - Itinerary Pattern Overview: classes/ItineraryPattern.md
+  - Classes:
+    - Itinerary: classes/Itinerary.md
+    - Itinerary By Waypoints: classes/ItineraryByWaypoints.md
+    - Itinerary Code: classes/ItineraryCode.md
+    - Itinerary Representation: classes/ItineraryRepresentation.md
+    - Location List: classes/LocationList.md
+  - Properties:
+    - hasWaypointList: properties/hasWaypointList.md
+    - locationContainedInItinerary: properties/locationContainedInItinerary.md
+- Linear Pattern:
+  - Linear Pattern Overview: classes/LinearPattern.md
+  - Classes:
+    - Linear By Code: classes/LinearByCode.md
+    - Linear By Linear Ring: classes/LinearByLinearRing.md
+    - Linear By Line String: classes/LinearByLineString.md
+    - Linear By Multi Line String: classes/LinearByMultiLineString.md
+    - Linear By Point Representations: classes/LinearByPointRepresentations.md
+    - Linear By Points: classes/LinearByPoints.md
+    - Linear Location: classes/LinearLocation.md
+    - Linear Representation: classes/LinearRepresentation.md
+    - Offset Distance: classes/OffsetDistance.md
+    - Point By Linear Position: classes/PointByLinearPosition.md
+    - Point Location List: classes/PointLocationList.md
+    - Point Representation List: classes/PointRepresentationList.md
+  - Properties:
+    - alongLinearRepresentation: properties/alongLinearRepresentation.md
+    - basePoint: properties/basePoint.md
+    - directionPoint: properties/directionPoint.md
+    - hasOffsetDistance: properties/hasOffsetDistance.md
+    - hasPointList: properties/hasPointList.md
+    - hasPointRepresentationList: properties/hasPointRepresentationList.md
+    - offsetLength: properties/offsetLength.md
+    - offsetPercentage: properties/offsetPercentage.md
+- Point Pattern:
+  - Point Pattern Overview: classes/PointPattern.md
+  - Classes:
+    - Distance Accuracy: classes/DistanceAccuracy.md
+    - Elevation: classes/Elevation.md
+    - Elevation Accuracy: classes/ElevationAccuracy.md
+    - Elevation Height Code: classes/ElevationHeightCode.md
+    - Elevation Reference Code: classes/ElevationReferenceCode.md
+    - Measurement Error Code: classes/MeasurementErrorCode.md
+    - Point By Code: classes/PointByCode.md
+    - Point By Coordinates: classes/PointByCoordinates.md
+    - Point By Geo Coordinates: classes/PointByGeoCoordinates.md
+    - Point By Projected Coordinates: classes/PointByProjectedCoordinates.md
+    - Point Location: classes/PointLocation.md
+    - Point Representation: classes/PointRepresentation.md
+    - Position Accuracy: classes/PositionAccuracy.md
+    - Position Confidence Ellipse: classes/PositionConfidenceEllipse.md
+  - Properties:
+    - bearing: properties/bearing.md
+    - confidencePercentage: properties/confidencePercentage.md
+    - distanceAccuracyErrorCode: properties/distanceAccuracyErrorCode.md
+    - easting: properties/easting.md
+    - hasDistanceAccuracy: properties/hasDistanceAccuracy.md
+    - hasElevation: properties/hasElevation.md
+    - hasElevationAccuracy: properties/hasElevationAccuracy.md
+    - hasElevationDistance: properties/hasElevationDistance.md
+    - hasElevationHeightCode: properties/hasElevationHeightCode.md
+    - hasElevationReference: properties/hasElevationReference.md
+    - hasPositionAccuracy: properties/hasPositionAccuracy.md
+    - hasPositionConfidenceEllipse: properties/hasPositionConfidenceEllipse.md
+    - latitude: properties/latitude.md
+    - longitude: properties/longitude.md
+    - northing: properties/northing.md
+    - semiMajorAxisLength: properties/semiMajorAxisLength.md
+    - semiMajorAxisLengthErrorCode: properties/semiMajorAxisLengthErrorCode.md
+    - semiMajorAxisOrientation: properties/semiMajorAxisOrientation.md
+    - semiMajorAxisOrientationErrorCode: properties/semiMajorAxisOrientationErrorCode.md
+    - semiMinorAxisLength: properties/semiMinorAxisLength.md
+    - semiMinorAxisLengthErrorCode: properties/semiMinorAxisLengthErrorCode.md
+site_url: https://isotc204.org/ontology-its-location-v1/latest/
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"
   rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"
