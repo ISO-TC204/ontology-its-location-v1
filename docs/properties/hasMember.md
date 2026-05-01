@@ -8,6 +8,6 @@ Relates a location group to a member spatial object.
 
 | Class |
 |-------|
-| [LocationGroup](../LocationGroup.md) |
+| [LocationGroup](../classes/LocationGroup.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasMember`

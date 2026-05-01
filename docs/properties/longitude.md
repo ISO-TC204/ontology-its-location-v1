@@ -8,6 +8,6 @@ Longitude of a point coordinate (decimal degrees; CRS implied or supplied by the
 
 | Class |
 |-------|
-| [PointByGeoCoordinates](../PointByGeoCoordinates.md) |
+| [PointByGeoCoordinates](../classes/PointByGeoCoordinates.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/longitude`

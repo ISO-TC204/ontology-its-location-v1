@@ -8,6 +8,6 @@ Number of times the base rectangle cell is replicated eastward in a grid area re
 
 | Class |
 |-------|
-| [AreaByGrid](../AreaByGrid.md) |
+| [AreaByGrid](../classes/AreaByGrid.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/numColumns`

@@ -8,6 +8,6 @@ Reference system for the elevation value.
 
 | Class |
 |-------|
-| [Elevation](../Elevation.md) |
+| [Elevation](../classes/Elevation.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasElevationReference`

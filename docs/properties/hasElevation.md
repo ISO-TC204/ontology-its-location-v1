@@ -8,6 +8,6 @@ Associates a point representation with an elevation value.
 
 | Class |
 |-------|
-| [PointByCoordinates](../PointByCoordinates.md) |
+| [PointByCoordinates](../classes/PointByCoordinates.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasElevation`

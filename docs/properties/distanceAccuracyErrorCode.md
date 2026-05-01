@@ -8,6 +8,6 @@ A code that identifies the error code for a distance accuracy value.
 
 | Class |
 |-------|
-| [DistanceAccuracy](../DistanceAccuracy.md) |
+| [DistanceAccuracy](../classes/DistanceAccuracy.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/distanceAccuracyErrorCode`

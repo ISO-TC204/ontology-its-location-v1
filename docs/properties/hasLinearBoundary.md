@@ -8,6 +8,6 @@ Associates an area representation with linear locations that define its boundary
 
 | Class |
 |-------|
-| [AreaByLinearBoundaries](../AreaByLinearBoundaries.md) |
+| [AreaByLinearBoundaries](../classes/AreaByLinearBoundaries.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasLinearBoundary`

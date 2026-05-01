@@ -8,6 +8,6 @@ A code qualifying the semi-major axis orientation measurement.
 
 | Class |
 |-------|
-| [PositionConfidenceEllipse](../PositionConfidenceEllipse.md) |
+| [PositionConfidenceEllipse](../classes/PositionConfidenceEllipse.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/semiMajorAxisOrientationErrorCode`

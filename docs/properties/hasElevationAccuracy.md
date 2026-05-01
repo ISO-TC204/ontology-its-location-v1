@@ -8,7 +8,7 @@ Associates a point representation with an elevation accuracy statement.
 
 | Class |
 |-------|
-| [PointByCoordinates](../PointByCoordinates.md) |
-| [Elevation](../Elevation.md) |
+| [PointByCoordinates](../classes/PointByCoordinates.md) |
+| [Elevation](../classes/Elevation.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasElevationAccuracy`

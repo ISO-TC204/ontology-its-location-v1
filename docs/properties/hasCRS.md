@@ -8,6 +8,6 @@ Associates a CoordinateGeometry with the coordinate reference system used to int
 
 | Class |
 |-------|
-| [CoordinateGeometry](../CoordinateGeometry.md) |
+| [CoordinateGeometry](../classes/CoordinateGeometry.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasCRS`

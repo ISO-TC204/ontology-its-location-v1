@@ -34,7 +34,8 @@
 :LinearLocation
     a owl:Class ;
     rdfs:subClassOf :Location ;
-    skos:definition "spatial location that extends between two point locations along a defined path"@en .
+    skos:definition "A spatial location that extends between two point locations along a defined path"@en ;
+    skos:note "The path can exhibit 3-dimensional characteristics."@en .
 
 :LinearRepresentation
     a owl:Class ;

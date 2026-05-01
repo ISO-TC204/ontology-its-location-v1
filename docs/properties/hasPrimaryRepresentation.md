@@ -8,10 +8,10 @@ Links a Location to its preferred (primary) representation node.
 
 | Class |
 |-------|
-| [PointLocation](../PointLocation.md) |
-| [LinearLocation](../LinearLocation.md) |
-| [Itinerary](../Itinerary.md) |
-| [AreaLocation](../AreaLocation.md) |
-| [Location](../Location.md) |
+| [PointLocation](../classes/PointLocation.md) |
+| [LinearLocation](../classes/LinearLocation.md) |
+| [Itinerary](../classes/Itinerary.md) |
+| [AreaLocation](../classes/AreaLocation.md) |
+| [Location](../classes/Location.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasPrimaryRepresentation`

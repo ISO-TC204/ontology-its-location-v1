@@ -8,6 +8,6 @@ The upper limit of the accuracy, expressed as a simple length value (e.g., withi
 
 | Class |
 |-------|
-| [DistanceAccuracy](../DistanceAccuracy.md) |
+| [DistanceAccuracy](../classes/DistanceAccuracy.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasDistanceAccuracy`

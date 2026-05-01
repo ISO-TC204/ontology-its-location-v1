@@ -8,6 +8,6 @@ Percent confidence in a reported value as defined by the percentile of the cumul
 
 | Class |
 |-------|
-| [DistanceAccuracy](../DistanceAccuracy.md) |
+| [DistanceAccuracy](../classes/DistanceAccuracy.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/confidencePercentage`

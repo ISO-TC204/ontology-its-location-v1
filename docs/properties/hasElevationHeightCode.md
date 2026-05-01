@@ -8,6 +8,6 @@ Coded elevation height value of a point location.
 
 | Class |
 |-------|
-| [Elevation](../Elevation.md) |
+| [Elevation](../classes/Elevation.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasElevationHeightCode`

@@ -8,6 +8,6 @@ The base/reference point from which the offset is measured.
 
 | Class |
 |-------|
-| [PointByLinearPosition](../PointByLinearPosition.md) |
+| [PointByLinearPosition](../classes/PointByLinearPosition.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/basePoint`

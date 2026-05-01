@@ -8,6 +8,6 @@ Bearing of a point location.
 
 | Class |
 |-------|
-| [PointLocation](../PointLocation.md) |
+| [PointLocation](../classes/PointLocation.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/bearing`

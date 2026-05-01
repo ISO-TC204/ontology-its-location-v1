@@ -8,6 +8,6 @@ Lower-left (southwestern) point of a rectangle area representation.
 
 | Class |
 |-------|
-| [AreaByRectangle](../AreaByRectangle.md) |
+| [AreaByRectangle](../classes/AreaByRectangle.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasLowerLeft`

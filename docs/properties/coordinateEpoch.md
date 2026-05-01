@@ -8,6 +8,6 @@ The epoch (observation/realization time) at which the coordinate tuples of a Coo
 
 | Class |
 |-------|
-| [CoordinateGeometry](../CoordinateGeometry.md) |
+| [CoordinateGeometry](../classes/CoordinateGeometry.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/coordinateEpoch`

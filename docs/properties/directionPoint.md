@@ -8,6 +8,6 @@ A second point used to establish the direction of offset relative to the basePoi
 
 | Class |
 |-------|
-| [PointByLinearPosition](../PointByLinearPosition.md) |
+| [PointByLinearPosition](../classes/PointByLinearPosition.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/directionPoint`

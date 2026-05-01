@@ -29,6 +29,10 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     a sh:NodeShape ;
     sh:targetClass :Feature ;
     sh:property [
+        sh:path cdm1:hasName ;
+        sh:datatype rdf:langString ;
+    ] ;
+    sh:property [
         sh:path cdm1:hasDescription ;
         sh:node its-sh:MaxOneMultilingualShape ;
     ] .
@@ -45,10 +49,6 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     a sh:NodeShape ;
     sh:targetClass :Location ;
     sh:and ( :FeatureShape ) ;
-    sh:property [
-        sh:path :hasName ;
-        sh:datatype rdf:langString ;
-    ] ;
     sh:property [
         sh:path :hasPrimaryRepresentation ;
         sh:node its-sh:ExactlyOneShape ;

@@ -8,6 +8,6 @@ Elevation distance of a point location, as measured from the elevation reference
 
 | Class |
 |-------|
-| [Elevation](../Elevation.md) |
+| [Elevation](../classes/Elevation.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasElevationDistance`

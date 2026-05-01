@@ -8,6 +8,6 @@ The easterly (x) dimension of a point coordinate expressed in some linear unit.
 
 | Class |
 |-------|
-| [PointByProjectedCoordinates](../PointByProjectedCoordinates.md) |
+| [PointByProjectedCoordinates](../classes/PointByProjectedCoordinates.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/easting`

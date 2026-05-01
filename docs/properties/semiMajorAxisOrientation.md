@@ -8,6 +8,6 @@ Orientation of the semi-major axis of the confidence ellipse.
 
 | Class |
 |-------|
-| [PositionConfidenceEllipse](../PositionConfidenceEllipse.md) |
+| [PositionConfidenceEllipse](../classes/PositionConfidenceEllipse.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/semiMajorAxisOrientation`

@@ -33,7 +33,7 @@
 :PointLocation
     a owl:Class ;
     rdfs:subClassOf :Location ;
-    skos:definition "spatial location with no length in any of the spatial dimensions."@en .
+    skos:definition "A spatial location with no length in any of the spatial dimensions."@en .
 
 :PointRepresentation
     a owl:Class ;
@@ -44,7 +44,7 @@
     a owl:Class ;
     rdfs:subClassOf :PointRepresentation ;
     rdfs:subClassOf :CoordinateGeometry ;
-    skos:definition "A point location representation encoded as coordinates and optional elements, such as elevation and metadata."@en .
+    skos:definition "A coordinate tuple defining the geodetic position of a single point location using a known geodetic reference system"@en .
 
 :PointByGeoCoordinates
     a owl:Class ;

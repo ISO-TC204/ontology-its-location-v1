@@ -39,7 +39,9 @@
 :AreaRepresentation
     a owl:Class ;
     rdfs:subClassOf :Geometry ;
-    skos:definition "A geometry/representation that encodes an area location using a specific method."@en .
+    skos:definition "A geometry/representation that encodes an area location using a specific method."@en ;
+    skos:note "The boundary can consist of a single curvilinear line (e.g. a circle) or multiple curvilinear lines (e.g. the boundaries of city limits) and can consist of multiple enclosed areas."@en ;
+    skos:example "The British Isles."@en .
 
 :AreaByPolygon
     a owl:Class ;

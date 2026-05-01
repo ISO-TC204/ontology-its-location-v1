@@ -8,6 +8,6 @@ Associates a point representation with a statement of positional accuracy.
 
 | Class |
 |-------|
-| [PointByCoordinates](../PointByCoordinates.md) |
+| [PointByCoordinates](../classes/PointByCoordinates.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasPositionAccuracy`

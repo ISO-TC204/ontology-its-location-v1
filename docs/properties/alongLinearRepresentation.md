@@ -8,6 +8,6 @@ Associates a PointByLinearPosition to the linear representation that it is locat
 
 | Class |
 |-------|
-| [PointByLinearPosition](../PointByLinearPosition.md) |
+| [PointByLinearPosition](../classes/PointByLinearPosition.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/alongLinearRepresentation`

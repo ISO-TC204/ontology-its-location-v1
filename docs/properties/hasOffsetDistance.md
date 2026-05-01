@@ -8,6 +8,6 @@ Associates a PointByLinearPosition with its offset distance value.
 
 | Class |
 |-------|
-| [PointByLinearPosition](../PointByLinearPosition.md) |
+| [PointByLinearPosition](../classes/PointByLinearPosition.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasOffsetDistance`

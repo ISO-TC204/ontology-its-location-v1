@@ -44,13 +44,14 @@
     a owl:Class ;
     rdfs:subClassOf :SpatialObject ;
     rdfs:subClassOf geo:Feature ;
-    skos:definition "An ITS-domain feature (subclass of geo:Feature) used to model real-world things that have a spatial location."@en .
+    skos:definition "An abstraction of real-world phenomena. An ITS-domain feature (subclass of geo:Feature) used to model real-world things that have a spatial location."@en ;
+    skos:note "Geographic features can be defined for any geographic entity that can be defined with geospatial boundaries, such as landmarks, buildings, transport infrastructure (e.g., road, pathway, railway, bridge structures, intersections, traffic signal cabinet, traffic signal pole, waterway), jurisdictional areas (e.g., country, city), etc."@en .
 
 :Geometry
     a owl:Class ;
     rdfs:subClassOf :SpatialObject ;
     rdfs:subClassOf geo:Geometry ;
-    skos:definition "An ITS-domain geometry (subclass of geo:Geometry) used to model geometric representations of features."@en .
+    skos:definition "A description of a spatial location in the real world according to a defined reference system"@en .
 
 :CoordinateGeometry
     a owl:Class ;
@@ -65,7 +66,17 @@
 :Location
     a owl:Class ;
     rdfs:subClassOf :Feature ;
-    skos:definition "A singular location modelled as a feature."@en .
+    skos:definition "A particular place or position."@en ;
+    skos:note "A location is modelled as a feature, which is a spatial object with a name."@en ;
+    skos:note "The term 'location' by itself is a broad term that can be used to reference spatial, computer memory, imaginary and other locations. Within the context of this ontology, it is used to reference physical locations within three-dimensional space."@en .
+
+:SpatialLocation
+    a owl:Class ;
+    rdfs:subClassOf :Feature ;
+    rdfs:equivalentClass :Location ;
+    skos:definition "A location that is represented in three-dimensional space."@en ;
+    skos:note "The 'location' could be a point (consuming no space) or could consume space in one, two or three dimensions. In any case, the location is identified within a larger space."@en ;
+    skos:note "Within ITS, locations are typically locations on or near the surface of the Earth."@en .
 
 :LocationGroup
     a owl:Class ;

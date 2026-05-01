@@ -4,64 +4,121 @@ repo_url: https://github.com/ISO-TC204/ontology-its-location-v1
 nav:
 - Home: index.md
 - Area Pattern:
-  - Area Pattern: area-pattern.md
-  - Area By Circle: AreaByCircle.md
-  - Area By Code: AreaByCode.md
-  - Area By Grid: AreaByGrid.md
-  - Area By Linear Boundaries: AreaByLinearBoundaries.md
-  - Area By Multi Polygon: AreaByMultiPolygon.md
-  - Area By Polygon: AreaByPolygon.md
-  - Area By Rectangle: AreaByRectangle.md
-  - Area Location: AreaLocation.md
-  - Area Representation: AreaRepresentation.md
+  - Area Pattern Overview: classes/AreaPattern.md
+  - Classes:
+    - Area By Circle: classes/AreaByCircle.md
+    - Area By Code: classes/AreaByCode.md
+    - Area By Grid: classes/AreaByGrid.md
+    - Area By Linear Boundaries: classes/AreaByLinearBoundaries.md
+    - Area By Multi Polygon: classes/AreaByMultiPolygon.md
+    - Area By Polygon: classes/AreaByPolygon.md
+    - Area By Rectangle: classes/AreaByRectangle.md
+    - Area Location: classes/AreaLocation.md
+    - Area Representation: classes/AreaRepresentation.md
+  - Properties:
+    - hasCenter: properties/hasCenter.md
+    - hasLinearBoundary: properties/hasLinearBoundary.md
+    - hasLowerLeft: properties/hasLowerLeft.md
+    - hasUpperRight: properties/hasUpperRight.md
+    - numColumns: properties/numColumns.md
+    - numRows: properties/numRows.md
+    - radius: properties/radius.md
 - Core Pattern:
-  - Core Pattern: core-pattern.md
-  - Coordinate Geometry: CoordinateGeometry.md
-  - Coordinate Reference System: CoordinateReferenceSystem.md
-  - Feature: Feature.md
-  - Geometry: Geometry.md
-  - Location: Location.md
-  - Location Code: LocationCode.md
-  - Location Group: LocationGroup.md
-  - Location Thing: LocationThing.md
-  - Spatial Object: SpatialObject.md
+  - Core Pattern Overview: classes/LocationCorePattern.md
+  - Classes:
+    - Coordinate Geometry: classes/CoordinateGeometry.md
+    - Coordinate Reference System: classes/CoordinateReferenceSystem.md
+    - Feature: classes/Feature.md
+    - Geometry: classes/Geometry.md
+    - Location: classes/Location.md
+    - Location Code: classes/LocationCode.md
+    - Location Group: classes/LocationGroup.md
+    - Location Thing: classes/LocationThing.md
+    - Spatial Location: classes/SpatialLocation.md
+    - Spatial Object: classes/SpatialObject.md
+  - Properties:
+    - coordinateEpoch: properties/coordinateEpoch.md
+    - geometryOf: properties/geometryOf.md
+    - hasAlternativeRepresentation: properties/hasAlternativeRepresentation.md
+    - hasCRS: properties/hasCRS.md
+    - hasMember: properties/hasMember.md
+    - hasPrimaryRepresentation: properties/hasPrimaryRepresentation.md
+    - LocationDataProperty: properties/LocationDataProperty.md
+    - LocationObjectProperty: properties/LocationObjectProperty.md
 - Itinerary Pattern:
-  - Itinerary Pattern: itinerary-pattern.md
-  - Itinerary: Itinerary.md
-  - Itinerary By Waypoints: ItineraryByWaypoints.md
-  - Itinerary Code: ItineraryCode.md
-  - Itinerary Representation: ItineraryRepresentation.md
-  - Location List: LocationList.md
+  - Itinerary Pattern Overview: classes/ItineraryPattern.md
+  - Classes:
+    - Itinerary: classes/Itinerary.md
+    - Itinerary By Waypoints: classes/ItineraryByWaypoints.md
+    - Itinerary Code: classes/ItineraryCode.md
+    - Itinerary Representation: classes/ItineraryRepresentation.md
+    - Location List: classes/LocationList.md
+  - Properties:
+    - hasWaypointList: properties/hasWaypointList.md
+    - locationContainedInItinerary: properties/locationContainedInItinerary.md
 - Linear Pattern:
-  - Linear Pattern: linear-pattern.md
-  - Linear By Code: LinearByCode.md
-  - Linear By Linear Ring: LinearByLinearRing.md
-  - Linear By Line String: LinearByLineString.md
-  - Linear By Multi Line String: LinearByMultiLineString.md
-  - Linear By Point Representations: LinearByPointRepresentations.md
-  - Linear By Points: LinearByPoints.md
-  - Linear Location: LinearLocation.md
-  - Linear Representation: LinearRepresentation.md
-  - Offset Distance: OffsetDistance.md
-  - Point By Linear Position: PointByLinearPosition.md
-  - Point Location List: PointLocationList.md
-  - Point Representation List: PointRepresentationList.md
+  - Linear Pattern Overview: classes/LinearPattern.md
+  - Classes:
+    - Linear By Code: classes/LinearByCode.md
+    - Linear By Linear Ring: classes/LinearByLinearRing.md
+    - Linear By Line String: classes/LinearByLineString.md
+    - Linear By Multi Line String: classes/LinearByMultiLineString.md
+    - Linear By Point Representations: classes/LinearByPointRepresentations.md
+    - Linear By Points: classes/LinearByPoints.md
+    - Linear Location: classes/LinearLocation.md
+    - Linear Representation: classes/LinearRepresentation.md
+    - Offset Distance: classes/OffsetDistance.md
+    - Point By Linear Position: classes/PointByLinearPosition.md
+    - Point Location List: classes/PointLocationList.md
+    - Point Representation List: classes/PointRepresentationList.md
+  - Properties:
+    - alongLinearRepresentation: properties/alongLinearRepresentation.md
+    - basePoint: properties/basePoint.md
+    - directionPoint: properties/directionPoint.md
+    - hasOffsetDistance: properties/hasOffsetDistance.md
+    - hasPointList: properties/hasPointList.md
+    - hasPointRepresentationList: properties/hasPointRepresentationList.md
+    - offsetLength: properties/offsetLength.md
+    - offsetPercentage: properties/offsetPercentage.md
 - Point Pattern:
-  - Point Pattern: point-pattern.md
-  - Distance Accuracy: DistanceAccuracy.md
-  - Elevation: Elevation.md
-  - Elevation Accuracy: ElevationAccuracy.md
-  - Elevation Height Code: ElevationHeightCode.md
-  - Elevation Reference Code: ElevationReferenceCode.md
-  - Measurement Error Code: MeasurementErrorCode.md
-  - Point By Code: PointByCode.md
-  - Point By Coordinates: PointByCoordinates.md
-  - Point By Geo Coordinates: PointByGeoCoordinates.md
-  - Point By Projected Coordinates: PointByProjectedCoordinates.md
-  - Point Location: PointLocation.md
-  - Point Representation: PointRepresentation.md
-  - Position Accuracy: PositionAccuracy.md
-  - Position Confidence Ellipse: PositionConfidenceEllipse.md
+  - Point Pattern Overview: classes/PointPattern.md
+  - Classes:
+    - Distance Accuracy: classes/DistanceAccuracy.md
+    - Elevation: classes/Elevation.md
+    - Elevation Accuracy: classes/ElevationAccuracy.md
+    - Elevation Height Code: classes/ElevationHeightCode.md
+    - Elevation Reference Code: classes/ElevationReferenceCode.md
+    - Measurement Error Code: classes/MeasurementErrorCode.md
+    - Point By Code: classes/PointByCode.md
+    - Point By Coordinates: classes/PointByCoordinates.md
+    - Point By Geo Coordinates: classes/PointByGeoCoordinates.md
+    - Point By Projected Coordinates: classes/PointByProjectedCoordinates.md
+    - Point Location: classes/PointLocation.md
+    - Point Representation: classes/PointRepresentation.md
+    - Position Accuracy: classes/PositionAccuracy.md
+    - Position Confidence Ellipse: classes/PositionConfidenceEllipse.md
+  - Properties:
+    - bearing: properties/bearing.md
+    - confidencePercentage: properties/confidencePercentage.md
+    - distanceAccuracyErrorCode: properties/distanceAccuracyErrorCode.md
+    - easting: properties/easting.md
+    - hasDistanceAccuracy: properties/hasDistanceAccuracy.md
+    - hasElevation: properties/hasElevation.md
+    - hasElevationAccuracy: properties/hasElevationAccuracy.md
+    - hasElevationDistance: properties/hasElevationDistance.md
+    - hasElevationHeightCode: properties/hasElevationHeightCode.md
+    - hasElevationReference: properties/hasElevationReference.md
+    - hasPositionAccuracy: properties/hasPositionAccuracy.md
+    - hasPositionConfidenceEllipse: properties/hasPositionConfidenceEllipse.md
+    - latitude: properties/latitude.md
+    - longitude: properties/longitude.md
+    - northing: properties/northing.md
+    - semiMajorAxisLength: properties/semiMajorAxisLength.md
+    - semiMajorAxisLengthErrorCode: properties/semiMajorAxisLengthErrorCode.md
+    - semiMajorAxisOrientation: properties/semiMajorAxisOrientation.md
+    - semiMajorAxisOrientationErrorCode: properties/semiMajorAxisOrientationErrorCode.md
+    - semiMinorAxisLength: properties/semiMinorAxisLength.md
+    - semiMinorAxisLengthErrorCode: properties/semiMinorAxisLengthErrorCode.md
 site_url: https://isotc204.org/ontology-its-location-v1/latest/
 copyright: <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/">
   <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank"

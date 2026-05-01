@@ -8,6 +8,6 @@ Associates a LinearByPointRepresentations representation with its ordered list o
 
 | Class |
 |-------|
-| [LinearByPointRepresentations](../LinearByPointRepresentations.md) |
+| [LinearByPointRepresentations](../classes/LinearByPointRepresentations.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasPointRepresentationList`

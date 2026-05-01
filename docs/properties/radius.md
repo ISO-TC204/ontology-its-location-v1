@@ -8,6 +8,6 @@ Radius of a circle area representation.
 
 | Class |
 |-------|
-| [AreaByCircle](../AreaByCircle.md) |
+| [AreaByCircle](../classes/AreaByCircle.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/radius`

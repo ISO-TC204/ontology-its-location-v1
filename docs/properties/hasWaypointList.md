@@ -8,6 +8,6 @@ Associates an itinerary-by-waypoints representation with its ordered list of mem
 
 | Class |
 |-------|
-| [ItineraryByWaypoints](../ItineraryByWaypoints.md) |
+| [ItineraryByWaypoints](../classes/ItineraryByWaypoints.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasWaypointList`
