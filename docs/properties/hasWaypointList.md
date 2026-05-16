@@ -2,7 +2,7 @@
 
 # hasWaypointList
 
-Associates an itinerary-by-waypoints representation with its ordered list of member locations (waypoints).
+Associates an itinerary by waypoints with its ordered list of member features (waypoints).
 
 ## Used in classes
 

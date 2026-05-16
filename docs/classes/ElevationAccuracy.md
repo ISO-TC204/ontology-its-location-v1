@@ -2,7 +2,7 @@
 
 # ElevationAccuracy
 
-A statement of elevation accuracy for a point representation.
+A statement of elevation accuracy for a point geometry.
 
 
 ## Diagram

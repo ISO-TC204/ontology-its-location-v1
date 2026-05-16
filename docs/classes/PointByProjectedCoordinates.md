@@ -2,7 +2,7 @@
 
 # PointByProjectedCoordinates
 
-A point location representation encoded as projected coordinates and optional elements, such as elevation and metadata.
+A point location geometry encoded as projected coordinates and optional elements, such as elevation and metadata.
 
 
 ## Diagram

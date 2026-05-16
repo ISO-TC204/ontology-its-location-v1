@@ -2,6 +2,6 @@
 
 # locationContainedInItinerary
 
-DATEX-aligned property name for associating an itinerary-by-waypoints representation with its ordered list of member locations.
+DATEX-aligned property name for associating an itinerary by waypoints with its ordered list of member features.
 
 **IRI**: `https://w3id.org/itsdata/location/v1/locationContainedInItinerary`

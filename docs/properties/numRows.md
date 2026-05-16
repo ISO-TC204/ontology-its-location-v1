@@ -2,7 +2,7 @@
 
 # numRows
 
-Number of times the base rectangle cell is replicated northward in a grid area representation. The height of the area is the height of the base cell multiplied by the number of rows.
+Number of times the base rectangle cell is replicated northward in a grid area geometry. The height of the area is the height of the base cell multiplied by the number of rows.
 
 ## Used in classes
 

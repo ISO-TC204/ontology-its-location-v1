@@ -8,11 +8,12 @@ PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
 PREFIX its-sh: <https://w3id.org/itsdata/shacl/v1/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 
 :ItinerarySHACL
     a owl:Ontology ;
     dcterms:title "SHACL rules for ITS Itinerary Referencing"@en ;
-    skos:definition "SHACL shapes for itineraries and itinerary representations."@en ;
+    skos:definition "SHACL shapes for itineraries and itinerary geometries."@en ;
     its-core:draft "true" ;
     dcterms:created "Draft" ;
     dcterms:modified "2026-05-01"^^xsd:date ;
@@ -29,35 +30,35 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     sh:targetClass :Itinerary ;
     sh:and ( :FeatureShape ) ;
     sh:property [
-        sh:path :hasPrimaryRepresentation ;
+        sh:path geo:hasDefaultGeometry ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :ItineraryRepresentation ;
-        sh:message "An Itinerary must have exactly one :hasPrimaryRepresentation value." ;
+        sh:class :ItineraryGeometry ;
+        sh:message "An Itinerary must have exactly one geo:hasDefaultGeometry value." ;
     ] ;
     sh:property [
-        sh:path :hasAlternativeRepresentation ;
+        sh:path geo:hasGeometry ;
         sh:node its-sh:UnlimitedShape ;
-        sh:class :ItineraryRepresentation ;
+        sh:class :ItineraryGeometry ;
     ] .
 
-:ItineraryRepresentationShape
+:ItineraryGeometryShape
     a sh:NodeShape ;
-    sh:targetClass :ItineraryRepresentation ;
+    sh:targetClass :ItineraryGeometry ;
     sh:and ( :GeometryShape ) .
 
 :ItineraryByWaypointsShape
     a sh:NodeShape ;
     sh:targetClass :ItineraryByWaypoints ;
-    sh:and ( :ItineraryRepresentationShape ) ;
+    sh:and ( :ItineraryGeometryShape ) ;
     sh:property [
         sh:path :hasWaypointList ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :LocationList ;
-        sh:message "ItineraryByWaypoints must have exactly one LocationList via :hasWaypointList." ;
+        sh:class :FeatureList ;
+        sh:message "ItineraryByWaypoints must have exactly one FeatureList via :hasWaypointList." ;
     ] ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "ItineraryByWaypoints must contain at least two member Locations." ;
+        sh:message "ItineraryByWaypoints must contain at least two member Features." ;
         sh:select """
             PREFIX : <https://w3id.org/itsdata/location/v1/>
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -75,20 +76,25 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         """ ;
     ] .
 
-:LocationListShape
+:FeatureListShape
     a sh:NodeShape ;
-    sh:targetClass :LocationList ;
+    sh:targetClass :FeatureList ;
     sh:property [
         sh:path rdf:first ;
-        sh:class :Location ;
+        sh:class :Feature ;
         sh:node its-sh:ExactlyOneShape ;
     ] ;
     sh:property [
         sh:path rdf:rest ;
-        sh:or ( [ sh:hasValue rdf:nil ] [ sh:class :LocationList ] ) ;
+        sh:or ( [ sh:hasValue rdf:nil ] [ sh:class :FeatureList ] ) ;
         sh:node its-sh:ExactlyOneShape ;
     ] ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:message "A LocationList must be a well-formed rdf:List of Locations." .
+    sh:message "A FeatureList must be a well-formed rdf:List of Features." .
+
+:ItineraryCodeShape
+    a sh:NodeShape ;
+    sh:targetClass :ItineraryCode ;
+    sh:and ( :ItineraryGeometryShape :CodedGeometryShape ) .
 

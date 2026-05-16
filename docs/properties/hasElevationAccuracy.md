@@ -2,7 +2,7 @@
 
 # hasElevationAccuracy
 
-Associates a point representation with an elevation accuracy statement.
+Associates a point geometry with an elevation accuracy statement.
 
 ## Used in classes
 

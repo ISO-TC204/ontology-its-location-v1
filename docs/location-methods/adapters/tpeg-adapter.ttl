@@ -18,8 +18,8 @@
     dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
     its-core:draft "true" ;
     owl:imports :LocationCorePattern ;
-    owl:imports :CoordinateLocationPattern ;
-    owl:imports :AreaLocationPattern ;
+    owl:imports :PointPattern ;
+    owl:imports :AreaPattern ;
     owl:versionInfo "0.0.1" ;
     owl:versionIRI <https://w3id.org/itsdata/location/v1/TPEGAdapter/r0.1> ;
     vann:preferredNamespacePrefix "its-location" ;
@@ -29,6 +29,6 @@
 
 :TPEGLocation
     a owl:Class ;
-    rdfs:subClassOf :Location ;
+    rdfs:subClassOf :Feature ;
     skos:definition "Placeholder class for TPEG referenced locations (to be aligned with existing TPEG pattern)."@en .
 

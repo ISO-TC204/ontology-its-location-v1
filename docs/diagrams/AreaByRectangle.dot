@@ -5,7 +5,7 @@ digraph {
 	edge [fontname=Arial fontsize=11]
 	{
 		rank=source
-		AreaRepresentation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">AreaRepresentation</TD></TR></TABLE>> URL="../AreaRepresentation" margin=0]
+		AreaGeometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">AreaGeometry</TD></TR></TABLE>> URL="../AreaGeometry" margin=0]
 	}
 	AreaByRectangle [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">AreaByRectangle</TD></TR></TABLE>> URL="../AreaByRectangle" margin=0]
 	{
@@ -14,12 +14,12 @@ digraph {
 	subgraph cluster_associated {
 		label="" style=invis
 		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
-		PointLocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointLocation</TD></TR></TABLE>> URL="../PointLocation" margin=0]
+		PointFeature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointFeature</TD></TR></TABLE>> URL="../PointFeature" margin=0]
 	}
-	AreaByRectangle -> AreaRepresentation [arrowhead=onormal style=solid]
+	AreaByRectangle -> AreaGeometry [arrowhead=onormal style=solid]
 	AreaByRectangle -> Invis [style=invis]
-	Invis -> PointLocation [style=invis]
-	PointLocation [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointLocation</TD></TR></TABLE>> URL="../PointLocation" margin=0]
-	AreaByRectangle -> PointLocation [label=hasLowerLeft arrowhead=normal style=solid]
-	AreaByRectangle -> PointLocation [label=hasUpperRight arrowhead=normal style=solid]
+	Invis -> PointFeature [style=invis]
+	PointFeature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointFeature</TD></TR></TABLE>> URL="../PointFeature" margin=0]
+	AreaByRectangle -> PointFeature [label=hasLowerLeft arrowhead=normal style=solid]
+	AreaByRectangle -> PointFeature [label=hasUpperRight arrowhead=normal style=solid]
 }

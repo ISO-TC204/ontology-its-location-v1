@@ -23,19 +23,19 @@ A coordinate tuple defining the geodetic position of a single point location usi
     <g id="node1" class="node">
     <title>CoordinateGeometry</title>
     <g id="a_node1"><a xlink:href="../CoordinateGeometry" xlink:title="&lt;TABLE&gt;">
-    <polygon fill="lightgray" stroke="none" points="73.5,-488.88 73.5,-505.12 186.5,-505.12 186.5,-488.88 73.5,-488.88"/>
-    <text xml:space="preserve" text-anchor="start" x="74.5" y="-492.88" font-family="Arial" font-size="12.00">CoordinateGeometry</text>
-    <polygon fill="none" stroke="black" points="72.5,-487.88 72.5,-506.12 187.5,-506.12 187.5,-487.88 72.5,-487.88"/>
+    <polygon fill="lightgray" stroke="none" points="81.5,-488.88 81.5,-505.12 194.5,-505.12 194.5,-488.88 81.5,-488.88"/>
+    <text xml:space="preserve" text-anchor="start" x="82.5" y="-492.88" font-family="Arial" font-size="12.00">CoordinateGeometry</text>
+    <polygon fill="none" stroke="black" points="80.5,-487.88 80.5,-506.12 195.5,-506.12 195.5,-487.88 80.5,-487.88"/>
     </a>
     </g>
     </g>
-    <!-- PointRepresentation -->
+    <!-- PointGeometry -->
     <g id="node2" class="node">
-    <title>PointRepresentation</title>
-    <g id="a_node2"><a xlink:href="../PointRepresentation" xlink:title="&lt;TABLE&gt;">
-    <polygon fill="lightgray" stroke="none" points="206.25,-488.88 206.25,-505.12 317.75,-505.12 317.75,-488.88 206.25,-488.88"/>
-    <text xml:space="preserve" text-anchor="start" x="207.25" y="-492.88" font-family="Arial" font-size="12.00">PointRepresentation</text>
-    <polygon fill="none" stroke="black" points="205.25,-487.88 205.25,-506.12 318.75,-506.12 318.75,-487.88 205.25,-487.88"/>
+    <title>PointGeometry</title>
+    <g id="a_node2"><a xlink:href="../PointGeometry" xlink:title="&lt;TABLE&gt;">
+    <polygon fill="lightgray" stroke="none" points="214.25,-488.88 214.25,-505.12 295.75,-505.12 295.75,-488.88 214.25,-488.88"/>
+    <text xml:space="preserve" text-anchor="start" x="215.25" y="-492.88" font-family="Arial" font-size="12.00">PointGeometry</text>
+    <polygon fill="none" stroke="black" points="213.25,-487.88 213.25,-506.12 296.75,-506.12 296.75,-487.88 213.25,-487.88"/>
     </a>
     </g>
     </g>
@@ -52,14 +52,14 @@ A coordinate tuple defining the geodetic position of a single point location usi
     <!-- PointByCoordinates&#45;&gt;CoordinateGeometry -->
     <g id="edge1" class="edge">
     <title>PointByCoordinates&#45;&gt;CoordinateGeometry</title>
-    <path fill="none" stroke="black" d="M180.47,-441.71C172.35,-450.44 162.25,-461.31 153.22,-471.02"/>
-    <polygon fill="none" stroke="black" points="150.92,-468.36 146.67,-478.07 156.04,-473.12 150.92,-468.36"/>
+    <path fill="none" stroke="black" d="M182.35,-441.71C175.36,-450.26 166.7,-460.87 158.89,-470.43"/>
+    <polygon fill="none" stroke="black" points="156.32,-468.04 152.7,-478 161.74,-472.47 156.32,-468.04"/>
     </g>
-    <!-- PointByCoordinates&#45;&gt;PointRepresentation -->
+    <!-- PointByCoordinates&#45;&gt;PointGeometry -->
     <g id="edge2" class="edge">
-    <title>PointByCoordinates&#45;&gt;PointRepresentation</title>
-    <path fill="none" stroke="black" d="M211.53,-441.71C219.65,-450.44 229.75,-461.31 238.78,-471.02"/>
-    <polygon fill="none" stroke="black" points="235.96,-473.12 245.33,-478.07 241.08,-468.36 235.96,-473.12"/>
+    <title>PointByCoordinates&#45;&gt;PointGeometry</title>
+    <path fill="none" stroke="black" d="M209.88,-441.71C216.99,-450.26 225.81,-460.87 233.75,-470.43"/>
+    <polygon fill="none" stroke="black" points="230.97,-472.56 240.05,-478.01 236.35,-468.08 230.97,-472.56"/>
     </g>
     <!-- Invis -->
     <!-- PointByCoordinates&#45;&gt;Invis -->
@@ -149,8 +149,8 @@ A coordinate tuple defining the geodetic position of a single point location usi
 
 | Class | Description |
 |-------|-------------|
-| [Point By Geo Coordinates](PointByGeoCoordinates.md) | A point location representation encoded as latitude/longitude and optional elements, such as elevation and metadata. |
-| [Point By Projected Coordinates](PointByProjectedCoordinates.md) | A point location representation encoded as projected coordinates and optional elements, such as elevation and metadata. |
+| [Point By Geo Coordinates](PointByGeoCoordinates.md) | A point location geometry encoded as latitude/longitude and optional elements, such as elevation and metadata. |
+| [Point By Projected Coordinates](PointByProjectedCoordinates.md) | A point location geometry encoded as projected coordinates and optional elements, such as elevation and metadata. |
 
 ## Formalization for PointByCoordinates
 
@@ -160,6 +160,6 @@ A coordinate tuple defining the geodetic position of a single point location usi
 | [hasElevationAccuracy](../properties/hasElevationAccuracy.md) | only [ElevationAccuracy](https://w3id.org/itsdata/location/v1/ElevationAccuracy) |
 | [hasPositionAccuracy](../properties/hasPositionAccuracy.md) | only [PositionAccuracy](https://w3id.org/itsdata/location/v1/PositionAccuracy) |
 | [hasPositionConfidenceEllipse](../properties/hasPositionConfidenceEllipse.md) | only [PositionConfidenceEllipse](https://w3id.org/itsdata/location/v1/PositionConfidenceEllipse) |
-| subClassOf | [PointRepresentation](PointRepresentation.md) |
+| subClassOf | [PointGeometry](PointGeometry.md) |
 | subClassOf | [CoordinateGeometry](CoordinateGeometry.md) |
 

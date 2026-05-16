@@ -2,7 +2,7 @@
 
 # ITS Area Referencing
 
-Methodology module for area-based locations and area location representations.
+Methodology module for area-based locations and area location geometries.
 
 This pattern imports the following files:
 
@@ -18,7 +18,17 @@ This pattern consists of the following classes:
 - [Area By Multi Polygon](AreaByMultiPolygon.md)
 - [Area By Polygon](AreaByPolygon.md)
 - [Area By Rectangle](AreaByRectangle.md)
-- [Area Location](AreaLocation.md)
-- [Area Representation](AreaRepresentation.md)
+- [Area Feature](AreaFeature.md)
+- [Area Geometry](AreaGeometry.md)
+This module defines the following properties:
+
+- [hasCenter](../properties/hasCenter.md)
+- [hasLinearBoundary](../properties/hasLinearBoundary.md)
+- [hasLowerLeft](../properties/hasLowerLeft.md)
+- [hasUpperRight](../properties/hasUpperRight.md)
+- [numColumns](../properties/numColumns.md)
+- [numRows](../properties/numRows.md)
+- [radius](../properties/radius.md)
+
 
 The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../area-pattern.ttl) and the SHACL [restrictions](../area-shacl.ttl).

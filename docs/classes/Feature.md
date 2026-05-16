@@ -79,13 +79,11 @@ NOTE: Geographic features can be defined for any geographic entity that can be d
 
 | Class | Description |
 |-------|-------------|
-| [Area Location](AreaLocation.md) | A spatial location enclosed within a two-dimensional boundary or boundaries across a defined surface. |
-| [Itinerary](Itinerary.md) | An ordered set of multiple physically separate locations forming a route or itinerary. |
-| [Linear Location](LinearLocation.md) | A spatial location that extends between two point locations along a defined path |
-| [Location](Location.md) | A particular place or position. |
-| [Location Group](LocationGroup.md) | An unordered set of multiple physically separate locations. |
-| [Point Location](PointLocation.md) | A spatial location with no length in any of the spatial dimensions. |
-| [Spatial Location](SpatialLocation.md) | A location that is represented in three-dimensional space. |
+| [Area Feature](AreaFeature.md) | A spatial feature enclosed within a two-dimensional boundary or boundaries across a defined surface. |
+| [Itinerary](Itinerary.md) | An ordered set of multiple physically separate features forming a route or itinerary. |
+| [Linear Feature](LinearFeature.md) | A spatial feature that extends along a defined path (typically between two point features or along a network element). |
+| [Location Group](LocationGroup.md) | An unordered set of multiple physically separate features (each typically a singular feature with its own geometry). |
+| [Point Feature](PointFeature.md) | A spatial feature with no length in any of the spatial dimensions (a point phenomenon in space). |
 
 ## Formalization for Feature
 

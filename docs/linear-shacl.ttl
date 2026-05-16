@@ -13,7 +13,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 :LinearSHACL
     a owl:Ontology ;
     dcterms:title "SHACL rules for ITS Linear Referencing"@en ;
-    skos:definition "SHACL shapes for linear elements, linear locations, and linear representations."@en ;
+    skos:definition "SHACL shapes for linear elements, linear locations, and linear geometries."@en ;
     its-core:draft "true" ;
     dcterms:created "Draft" ;
     dcterms:modified "2026-04-30"^^xsd:date ;
@@ -26,79 +26,74 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 # Node shapes
 #################################################################
 
-:LinearLocationShape
+:LinearFeatureShape
     a sh:NodeShape ;
-    sh:targetClass :LinearLocation ;
-    sh:and ( :LocationShape ) ;
-    sh:property [
-        sh:path :hasPrimaryRepresentation ;
-        sh:node its-sh:ExactlyOneShape ;
-        sh:class :LinearRepresentation ;
-    ] ;
-    sh:property [
-        sh:path :hasAlternativeRepresentation ;
-        sh:node its-sh:UnlimitedShape ;
-        sh:class :LinearRepresentation ;
-    ] .
+    sh:targetClass :LinearFeature ;
+    sh:and ( :FeatureShape ) .
 
-:LinearRepresentationShape
+:LinearGeometryShape
     a sh:NodeShape ;
-    sh:targetClass :LinearRepresentation ;
+    sh:targetClass :LinearGeometry ;
     sh:and ( :GeometryShape ) .
 
-:LinearByPointsShape
+:LinearByCodeShape
     a sh:NodeShape ;
-    sh:targetClass :LinearByPoints ;
-    sh:and ( :LinearRepresentationShape ) ;
+    sh:targetClass :LinearByCode ;
+    sh:and ( :LinearGeometryShape :CodedGeometryShape ) .
+
+:LinearByPointFeaturesShape
+    a sh:NodeShape ;
+    sh:targetClass :LinearByPointFeatures ;
+    sh:and ( :LinearGeometryShape ) ;
     sh:property [
         sh:path :hasPointList ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :PointLocationList ;
-        sh:message "LinearByPoints must have a single PointList." ;
+        sh:class :PointFeatureList ;
+        sh:message "LinearByPointFeatures must have a single PointFeatureList." ;
     ] .
 
-:LinearByPointRepresentationsShape
+:LinearByPointGeometriesShape
     a sh:NodeShape ;
-    sh:targetClass :LinearByPointRepresentations ;
-    sh:and ( :LinearRepresentationShape ) ;
+    sh:targetClass :LinearByPointGeometries ;
+    sh:and ( :LinearGeometryShape ) ;
     sh:property [
-        sh:path :hasPointRepresentationList ;
+        sh:path :hasPointGeometryList ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :PointRepresentationList ;
-        sh:message "LinearByPointRepresentations must have a single PointRepresentationList." ;
+        sh:class :PointGeometryList ;
+        sh:message "LinearByPointGeometries must have a single PointGeometryList." ;
     ] .
 
-:PointLocationListShape a sh:NodeShape ;
-    sh:targetClass :PointLocationList ;
+:PointFeatureListShape a sh:NodeShape ;
+    sh:targetClass :PointFeatureList ;
     sh:property [
         sh:path rdf:first ;
-        sh:class :PointLocation ;
+        sh:class :PointFeature ;
         sh:node its-sh:ExactlyOneShape ;
     ] ;
     sh:property [
         sh:path rdf:rest ;
-        sh:or ( [ sh:hasValue rdf:nil ] [ sh:class :PointLocationList ] ) ;
+        sh:or ( [ sh:hasValue rdf:nil ] [ sh:class :PointFeatureList ] ) ;
         sh:node its-sh:ExactlyOneShape ;
     ] ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:message "A PointList must be a well-formed rdf:List of Points." .
+    sh:message "A PointFeatureList must be a well-formed rdf:List of PointFeatures." .
 
-:PointRepresentationListShape a sh:NodeShape ;
-    sh:targetClass :PointRepresentationList ;
+:PointGeometryListShape a sh:NodeShape ;
+    sh:targetClass :PointGeometryList ;
     sh:property [
         sh:path rdf:first ;
-        sh:class :PointRepresentation ;
+        sh:class :PointGeometry ;
         sh:node its-sh:ExactlyOneShape ;
     ] ;
     sh:property [
         sh:path rdf:rest ;
-        sh:or ( [ sh:hasValue rdf:nil ] [ sh:class :PointRepresentationList ] ) ;
+        sh:or ( [ sh:hasValue rdf:nil ] [ sh:class :PointGeometryList ] ) ;
         sh:node its-sh:ExactlyOneShape ;
     ] ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
-    sh:message "A PointRepresentationList must be a well-formed rdf:List of PointRepresentations." .
+    sh:message "A PointGeometryList must be a well-formed rdf:List of PointGeometries." .
 
 :OffsetDistanceShape
     a sh:NodeShape ;
@@ -124,11 +119,11 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 :PointByLinearPositionShape
     a sh:NodeShape ;
     sh:targetClass :PointByLinearPosition ;
-    sh:and ( :PointRepresentationShape ) ;
+    sh:and ( :PointGeometryShape ) ;
     sh:property [
-        sh:path :alongLinearRepresentation ;
+        sh:path :alongLinearGeometry ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :LinearByPoints ;
+        sh:class :LinearGeometry ;
     ] ;
     sh:property [
         sh:path :hasOffsetDistance ;
@@ -138,16 +133,16 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     sh:property [
         sh:path :basePoint ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :PointLocation ;
+        sh:class :PointFeature ;
     ] ;
     sh:property [
         sh:path :directionPoint ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :PointLocation ;
+        sh:class :PointFeature ;
     ] ;
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "basePoint and directionPoint must be different Points." ;
+        sh:message "basePoint and directionPoint must be different point features." ;
         sh:select """
             PREFIX : <https://w3id.org/itsdata/location/v1/>
             SELECT $this ?base ?dir
@@ -161,13 +156,13 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
     sh:sparql [
         a sh:SPARQLConstraint ;
-        sh:message "basePoint and directionPoint must be members of the PointList that defines the referenced LinearByPoints representation." ;
+        sh:message "basePoint and directionPoint must be members of the PointFeatureList that defines the referenced LinearByPointFeatures geometry." ;
         sh:select """
             PREFIX : <https://w3id.org/itsdata/location/v1/>
             PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
             SELECT $this ?line ?list ?base ?dir
             WHERE {
-                $this :alongLinearRepresentation ?line ;
+                $this :alongLinearGeometry ?line ;
                       :basePoint ?base ;
                       :directionPoint ?dir .
 

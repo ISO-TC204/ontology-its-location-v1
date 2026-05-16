@@ -2,12 +2,12 @@
 
 # hasPointList
 
-Associates a LinearByPoints representation with its ordered list of member points.
+Associates LinearByPointFeatures with its ordered list of member points.
 
 ## Used in classes
 
 | Class |
 |-------|
-| [LinearByPoints](../classes/LinearByPoints.md) |
+| [LinearByPointFeatures](../classes/LinearByPointFeatures.md) |
 
 **IRI**: `https://w3id.org/itsdata/location/v1/hasPointList`

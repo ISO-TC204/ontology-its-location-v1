@@ -2,7 +2,7 @@
 
 # PointByGeoCoordinates
 
-A point location representation encoded as latitude/longitude and optional elements, such as elevation and metadata.
+A point location geometry encoded as latitude/longitude and optional elements, such as elevation and metadata.
 
 
 ## Diagram

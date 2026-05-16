@@ -2,7 +2,7 @@
 
 # latitude
 
-Latitude of a point coordinate (decimal degrees; CRS implied or supplied by the representation context).
+Latitude of a point coordinate (decimal degrees; CRS implied or supplied by the geometry context).
 
 ## Used in classes
 

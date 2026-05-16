@@ -2,7 +2,7 @@
 
 # hasUpperRight
 
-Upper-right (northeastern) point of a rectangle area representation.
+Upper-right (northeastern) point of a rectangle area geometry.
 
 ## Used in classes
 

@@ -2,7 +2,7 @@
 
 # hasPositionAccuracy
 
-Associates a point representation with a statement of positional accuracy.
+Associates a point geometry with a statement of positional accuracy.
 
 ## Used in classes
 

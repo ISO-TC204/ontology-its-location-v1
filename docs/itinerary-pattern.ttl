@@ -12,7 +12,7 @@
 :ItineraryPattern
     a owl:Ontology ;
     dcterms:title "ITS Itinerary Referencing"@en ;
-    skos:definition "Methodology module for itineraries (ordered sets of locations) and itinerary representations."@en ;
+    skos:definition "Methodology module for itineraries (ordered sets of features) and itinerary geometries."@en ;
     dcterms:creator "Kenneth Vaughn" ;
     dcterms:created "Draft" ;
     dcterms:modified "2026-05-01"^^xsd:date ;
@@ -31,32 +31,32 @@
 :Itinerary
     a owl:Class ;
     rdfs:subClassOf :Feature ;
-    skos:definition "An ordered set of multiple physically separate locations forming a route or itinerary."@en .
+    skos:definition "An ordered set of multiple physically separate features forming a route or itinerary."@en .
 
-:ItineraryRepresentation
+:ItineraryGeometry
     a owl:Class ;
     rdfs:subClassOf :Geometry ;
-    skos:definition "A geometry/representation that encodes an itinerary using a specific method."@en .
+    skos:definition "A geometry that encodes an itinerary using a specific method."@en .
 
 :ItineraryByWaypoints
     a owl:Class ;
-    rdfs:subClassOf :ItineraryRepresentation ;
-    skos:definition "An itinerary representation encoded as an ordered sequence of locations (waypoints)."@en .
+    rdfs:subClassOf :ItineraryGeometry ;
+    skos:definition "An itinerary geometry encoded as an ordered sequence of features (waypoints)."@en .
 
 :ItineraryCode
     a owl:Class ;
-    rdfs:subClassOf :ItineraryRepresentation ;
-    rdfs:subClassOf its-core:Code ;
-    skos:definition "An itinerary representation encoded as a code that references an entry in an external itinerary/route referencing system."@en .
+    rdfs:subClassOf :ItineraryGeometry ;
+    rdfs:subClassOf :CodedGeometry ;
+    skos:definition "An itinerary geometry whose route geometry is not modelled here but can be resolved using :hasLookupCode and an external itinerary/route referencing system."@en .
 
-:LocationList
+:FeatureList
     a owl:Class ;
     rdfs:subClassOf rdf:List ;
     rdfs:subClassOf [
         owl:onProperty    rdf:first ;
-        owl:allValuesFrom :Location ;
+        owl:allValuesFrom :Feature ;
     ] ;
-    skos:definition "An ordered list of member locations."@en .
+    skos:definition "An ordered list of member features (e.g., itinerary waypoints)."@en .
 
 #################################################################
 # Properties
@@ -67,13 +67,13 @@
     rdfs:subPropertyOf :LocationObjectProperty ;
     rdfs:subPropertyOf :hasWaypointList ;
     schema:domainIncludes :ItineraryByWaypoints ;
-    schema:rangeIncludes :LocationList ;
-    skos:definition "DATEX-aligned property name for associating an itinerary-by-waypoints representation with its ordered list of member locations."@en .
+    schema:rangeIncludes :FeatureList ;
+    skos:definition "DATEX-aligned property name for associating an itinerary by waypoints with its ordered list of member features."@en .
 
 :hasWaypointList
     a owl:ObjectProperty ;
     rdfs:subPropertyOf :LocationObjectProperty ;
     schema:domainIncludes :ItineraryByWaypoints ;
-    schema:rangeIncludes :LocationList ;
-    skos:definition "Associates an itinerary-by-waypoints representation with its ordered list of member locations (waypoints)."@en .
+    schema:rangeIncludes :FeatureList ;
+    skos:definition "Associates an itinerary by waypoints with its ordered list of member features (waypoints)."@en .
 
