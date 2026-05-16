@@ -2,7 +2,7 @@
 
 # hasLinearBoundary
 
-Associates an area representation with linear locations that define its boundary.
+Associates an area geometry with linear features that define its boundary.
 
 ## Used in classes
 

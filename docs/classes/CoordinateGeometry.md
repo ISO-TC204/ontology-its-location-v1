@@ -81,8 +81,8 @@ A geometry that is represented by a coordinate system (i.e., directly encodes co
 | Class | Description |
 |-------|-------------|
 | [Point By Coordinates](PointByCoordinates.md) | A coordinate tuple defining the geodetic position of a single point location using a known geodetic reference system |
-| [Point By Geo Coordinates](PointByGeoCoordinates.md) | A point location representation encoded as latitude/longitude and optional elements, such as elevation and metadata. |
-| [Point By Projected Coordinates](PointByProjectedCoordinates.md) | A point location representation encoded as projected coordinates and optional elements, such as elevation and metadata. |
+| [Point By Geo Coordinates](PointByGeoCoordinates.md) | A point location geometry encoded as latitude/longitude and optional elements, such as elevation and metadata. |
+| [Point By Projected Coordinates](PointByProjectedCoordinates.md) | A point location geometry encoded as projected coordinates and optional elements, such as elevation and metadata. |
 
 ## Formalization for CoordinateGeometry
 

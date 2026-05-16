@@ -2,7 +2,7 @@
 
 # hasPositionConfidenceEllipse
 
-Associates a point representation with a confidence ellipse statement.
+Associates a point geometry with a confidence ellipse statement.
 
 ## Used in classes
 

@@ -12,7 +12,7 @@ PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
 :AreaSHACL
     a owl:Ontology ;
     dcterms:title "SHACL rules for ITS Area Referencing"@en ;
-    skos:definition "SHACL shapes for area-based locations and area representations."@en ;
+    skos:definition "SHACL shapes for area-based locations and area geometries."@en ;
     its-core:draft "true" ;
     dcterms:created "Draft" ;
     dcterms:modified "2026-05-01"^^xsd:date ;
@@ -25,46 +25,41 @@ PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
 # Node shapes
 #################################################################
 
-:AreaLocationShape
+:AreaFeatureShape
     a sh:NodeShape ;
-    sh:targetClass :AreaLocation ;
-    sh:and ( :LocationShape ) ;
-    sh:property [
-        sh:path :hasPrimaryRepresentation ;
-        sh:node its-sh:ExactlyOneShape ;
-        sh:class :AreaRepresentation ;
-    ] ;
-    sh:property [
-        sh:path :hasAlternativeRepresentation ;
-        sh:node its-sh:UnlimitedShape ;
-        sh:class :AreaRepresentation ;
-    ] .
+    sh:targetClass :AreaFeature ;
+    sh:and ( :FeatureShape ) .
 
-:AreaRepresentationShape
+:AreaGeometryShape
     a sh:NodeShape ;
-    sh:targetClass :AreaRepresentation ;
+    sh:targetClass :AreaGeometry ;
     sh:and ( :GeometryShape ) .
 
 :AreaByLinearBoundariesShape
     a sh:NodeShape ;
     sh:targetClass :AreaByLinearBoundaries ;
-    sh:and ( :AreaRepresentationShape ) ;
+    sh:and ( :AreaGeometryShape ) ;
     sh:property [
         sh:path :hasLinearBoundary ;
         sh:minCount 1 ;
-        sh:class :LinearLocation ;
-        sh:message "AreaByLinearBoundaries must have at least one linear boundary location." ;
+        sh:class :LinearFeature ;
+        sh:message "AreaByLinearBoundaries must have at least one linear boundary (LinearFeature)." ;
     ] .
+
+:AreaByCodeShape
+    a sh:NodeShape ;
+    sh:targetClass :AreaByCode ;
+    sh:and ( :AreaGeometryShape :CodedGeometryShape ) .
 
 :AreaByCircleShape
     a sh:NodeShape ;
     sh:targetClass :AreaByCircle ;
-    sh:and ( :AreaRepresentationShape ) ;
+    sh:and ( :AreaGeometryShape ) ;
     sh:property [
         sh:path :hasCenter ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :PointLocation ;
-        sh:message "AreaByCircle must have exactly one center point." ;
+        sh:class :PointFeature ;
+        sh:message "AreaByCircle must have exactly one center point (PointFeature)." ;
     ] ;
     sh:property [
         sh:path :radius ;
@@ -76,18 +71,18 @@ PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
 :AreaByRectangleShape
     a sh:NodeShape ;
     sh:targetClass :AreaByRectangle ;
-    sh:and ( :AreaRepresentationShape ) ;
+    sh:and ( :AreaGeometryShape ) ;
     sh:property [
         sh:path :hasLowerLeft ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :PointLocation ;
-        sh:message "AreaByRectangle must have exactly one lower-left point." ;
+        sh:class :PointFeature ;
+        sh:message "AreaByRectangle must have exactly one lower-left point (PointFeature)." ;
     ] ;
     sh:property [
         sh:path :hasUpperRight ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :PointLocation ;
-        sh:message "AreaByRectangle must have exactly one upper-right point." ;
+        sh:class :PointFeature ;
+        sh:message "AreaByRectangle must have exactly one upper-right point (PointFeature)." ;
     ] .
 
 :AreaByGridShape
@@ -98,12 +93,12 @@ PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
         sh:path :numColumns ;
         sh:node its-sh:ExactlyOneShape ;
         sh:datatype xsd:nonNegativeInteger ;
-        sh:message "AreaByGrid must have exactly one numColumns, which is the number of times the base rectangle cell is replicated eastward in the grid area representation. The width of the area is the width of the base cell multiplied by the number of columns." ;
+        sh:message "AreaByGrid must have exactly one numColumns, which is the number of times the base rectangle cell is replicated eastward in the grid area geometry. The width of the area is the width of the base cell multiplied by the number of columns." ;
     ] ;
     sh:property [
         sh:path :numRows ;
         sh:node its-sh:ExactlyOneShape ;
         sh:datatype xsd:nonNegativeInteger ;
-        sh:message "AreaByGrid must have exactly one numRows, which is the number of times the base rectangle cell is replicated northward in the grid area representation. The height of the area is the height of the base cell multiplied by the number of rows." ;
+        sh:message "AreaByGrid must have exactly one numRows, which is the number of times the base rectangle cell is replicated northward in the grid area geometry. The height of the area is the height of the base cell multiplied by the number of rows." ;
     ] .
 

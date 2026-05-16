@@ -2,7 +2,7 @@
 
 # radius
 
-Radius of a circle area representation.
+Radius of a circle area geometry.
 
 ## Used in classes
 

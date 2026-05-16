@@ -2,7 +2,7 @@
 
 # hasLowerLeft
 
-Lower-left (southwestern) point of a rectangle area representation.
+Lower-left (southwestern) point of a rectangle area geometry.
 
 ## Used in classes
 

@@ -2,7 +2,7 @@
 
 # numColumns
 
-Number of times the base rectangle cell is replicated eastward in a grid area representation. The width of the area is the width of the base cell multiplied by the number of columns.
+Number of times the base rectangle cell is replicated eastward in a grid area geometry. The width of the area is the width of the base cell multiplied by the number of columns.
 
 ## Used in classes
 

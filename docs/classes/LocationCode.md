@@ -72,14 +72,6 @@ A code that identifies (or can be used to look up) a location in some external r
 
 
 
-## Specializations of LocationCode
-
-| Class | Description |
-|-------|-------------|
-| [Area By Code](AreaByCode.md) | An area representation encoded as a code that references an entry in an external location referencing system. |
-| [Linear By Code](LinearByCode.md) | A linear representation encoded as a code that references an entry in an external location referencing system. |
-| [Point By Code](PointByCode.md) | A point location representation using a code that references an entry in an external location referencing system. |
-
 ## Formalization for LocationCode
 
 | Property | Constraint |

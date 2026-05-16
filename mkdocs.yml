@@ -13,8 +13,8 @@ nav:
     - Area By Multi Polygon: classes/AreaByMultiPolygon.md
     - Area By Polygon: classes/AreaByPolygon.md
     - Area By Rectangle: classes/AreaByRectangle.md
-    - Area Location: classes/AreaLocation.md
-    - Area Representation: classes/AreaRepresentation.md
+    - Area Feature: classes/AreaFeature.md
+    - Area Geometry: classes/AreaGeometry.md
   - Properties:
     - hasCenter: properties/hasCenter.md
     - hasLinearBoundary: properties/hasLinearBoundary.md
@@ -26,33 +26,31 @@ nav:
 - Core Pattern:
   - Core Pattern Overview: classes/LocationCorePattern.md
   - Classes:
+    - Coded Geometry: classes/CodedGeometry.md
     - Coordinate Geometry: classes/CoordinateGeometry.md
     - Coordinate Reference System: classes/CoordinateReferenceSystem.md
     - Feature: classes/Feature.md
     - Geometry: classes/Geometry.md
-    - Location: classes/Location.md
     - Location Code: classes/LocationCode.md
     - Location Group: classes/LocationGroup.md
     - Location Thing: classes/LocationThing.md
-    - Spatial Location: classes/SpatialLocation.md
     - Spatial Object: classes/SpatialObject.md
   - Properties:
     - coordinateEpoch: properties/coordinateEpoch.md
     - geometryOf: properties/geometryOf.md
-    - hasAlternativeRepresentation: properties/hasAlternativeRepresentation.md
     - hasCRS: properties/hasCRS.md
+    - hasLookupCode: properties/hasLookupCode.md
     - hasMember: properties/hasMember.md
-    - hasPrimaryRepresentation: properties/hasPrimaryRepresentation.md
     - LocationDataProperty: properties/LocationDataProperty.md
     - LocationObjectProperty: properties/LocationObjectProperty.md
 - Itinerary Pattern:
   - Itinerary Pattern Overview: classes/ItineraryPattern.md
   - Classes:
+    - Feature List: classes/FeatureList.md
     - Itinerary: classes/Itinerary.md
     - Itinerary By Waypoints: classes/ItineraryByWaypoints.md
     - Itinerary Code: classes/ItineraryCode.md
-    - Itinerary Representation: classes/ItineraryRepresentation.md
-    - Location List: classes/LocationList.md
+    - Itinerary Geometry: classes/ItineraryGeometry.md
   - Properties:
     - hasWaypointList: properties/hasWaypointList.md
     - locationContainedInItinerary: properties/locationContainedInItinerary.md
@@ -63,21 +61,21 @@ nav:
     - Linear By Linear Ring: classes/LinearByLinearRing.md
     - Linear By Line String: classes/LinearByLineString.md
     - Linear By Multi Line String: classes/LinearByMultiLineString.md
-    - Linear By Point Representations: classes/LinearByPointRepresentations.md
-    - Linear By Points: classes/LinearByPoints.md
-    - Linear Location: classes/LinearLocation.md
-    - Linear Representation: classes/LinearRepresentation.md
+    - Linear By Point Features: classes/LinearByPointFeatures.md
+    - Linear By Point Geometries: classes/LinearByPointGeometries.md
+    - Linear Feature: classes/LinearFeature.md
+    - Linear Geometry: classes/LinearGeometry.md
     - Offset Distance: classes/OffsetDistance.md
     - Point By Linear Position: classes/PointByLinearPosition.md
-    - Point Location List: classes/PointLocationList.md
-    - Point Representation List: classes/PointRepresentationList.md
+    - Point Feature List: classes/PointFeatureList.md
+    - Point Geometry List: classes/PointGeometryList.md
   - Properties:
-    - alongLinearRepresentation: properties/alongLinearRepresentation.md
+    - alongLinearGeometry: properties/alongLinearGeometry.md
     - basePoint: properties/basePoint.md
     - directionPoint: properties/directionPoint.md
     - hasOffsetDistance: properties/hasOffsetDistance.md
+    - hasPointGeometryList: properties/hasPointGeometryList.md
     - hasPointList: properties/hasPointList.md
-    - hasPointRepresentationList: properties/hasPointRepresentationList.md
     - offsetLength: properties/offsetLength.md
     - offsetPercentage: properties/offsetPercentage.md
 - Point Pattern:
@@ -93,8 +91,8 @@ nav:
     - Point By Coordinates: classes/PointByCoordinates.md
     - Point By Geo Coordinates: classes/PointByGeoCoordinates.md
     - Point By Projected Coordinates: classes/PointByProjectedCoordinates.md
-    - Point Location: classes/PointLocation.md
-    - Point Representation: classes/PointRepresentation.md
+    - Point Feature: classes/PointFeature.md
+    - Point Geometry: classes/PointGeometry.md
     - Position Accuracy: classes/PositionAccuracy.md
     - Position Confidence Ellipse: classes/PositionConfidenceEllipse.md
   - Properties:

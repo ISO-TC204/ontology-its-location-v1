@@ -2,7 +2,7 @@
 
 # longitude
 
-Longitude of a point coordinate (decimal degrees; CRS implied or supplied by the representation context).
+Longitude of a point coordinate (decimal degrees; CRS implied or supplied by the geometry context).
 
 ## Used in classes
 

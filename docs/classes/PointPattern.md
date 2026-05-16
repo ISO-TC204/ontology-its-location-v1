@@ -2,7 +2,7 @@
 
 # ITS Point Referencing
 
-A module of the ITS Location Ontology that defines concepts for point-based locations and representations of those locations.
+A module of the ITS Location Ontology that defines concepts for point-based locations and geometries of those locations.
 
 This pattern imports the following files:
 
@@ -20,9 +20,33 @@ This pattern consists of the following classes:
 - [Point By Coordinates](PointByCoordinates.md)
 - [Point By Geo Coordinates](PointByGeoCoordinates.md)
 - [Point By Projected Coordinates](PointByProjectedCoordinates.md)
-- [Point Location](PointLocation.md)
-- [Point Representation](PointRepresentation.md)
+- [Point Feature](PointFeature.md)
+- [Point Geometry](PointGeometry.md)
 - [Position Accuracy](PositionAccuracy.md)
 - [Position Confidence Ellipse](PositionConfidenceEllipse.md)
+This module defines the following properties:
+
+- [bearing](../properties/bearing.md)
+- [confidencePercentage](../properties/confidencePercentage.md)
+- [distanceAccuracyErrorCode](../properties/distanceAccuracyErrorCode.md)
+- [easting](../properties/easting.md)
+- [hasDistanceAccuracy](../properties/hasDistanceAccuracy.md)
+- [hasElevation](../properties/hasElevation.md)
+- [hasElevationAccuracy](../properties/hasElevationAccuracy.md)
+- [hasElevationDistance](../properties/hasElevationDistance.md)
+- [hasElevationHeightCode](../properties/hasElevationHeightCode.md)
+- [hasElevationReference](../properties/hasElevationReference.md)
+- [hasPositionAccuracy](../properties/hasPositionAccuracy.md)
+- [hasPositionConfidenceEllipse](../properties/hasPositionConfidenceEllipse.md)
+- [latitude](../properties/latitude.md)
+- [longitude](../properties/longitude.md)
+- [northing](../properties/northing.md)
+- [semiMajorAxisLength](../properties/semiMajorAxisLength.md)
+- [semiMajorAxisLengthErrorCode](../properties/semiMajorAxisLengthErrorCode.md)
+- [semiMajorAxisOrientation](../properties/semiMajorAxisOrientation.md)
+- [semiMajorAxisOrientationErrorCode](../properties/semiMajorAxisOrientationErrorCode.md)
+- [semiMinorAxisLength](../properties/semiMinorAxisLength.md)
+- [semiMinorAxisLengthErrorCode](../properties/semiMinorAxisLengthErrorCode.md)
+
 
 The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../point-pattern.ttl) and the SHACL [restrictions](../point-shacl.ttl).

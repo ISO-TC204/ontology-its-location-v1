@@ -2,7 +2,9 @@
 
 # Geometry
 
-A description of a spatial location in the real world according to a defined reference system
+A description of a spatial location in the real world according to a defined reference system.
+
+NOTE: A Geometry can be complex, such as a jurisdictional area that consists of multiple islands.
 
 
 ## Diagram
@@ -76,33 +78,38 @@ A description of a spatial location in the real world according to a defined ref
 
 | Class | Description |
 |-------|-------------|
-| [Area By Circle](AreaByCircle.md) | An area representation encoded as a circle. |
-| [Area By Code](AreaByCode.md) | An area representation encoded as a code that references an entry in an external location referencing system. |
-| [Area By Grid](AreaByGrid.md) | An area representation encoded as a grid. The rectangle defined by lower-left and upper-right is the base cell, which is replicated eastward (columns) and northward (rows). |
-| [Area By Grid](AreaByGrid.md) | An area representation encoded as a grid. The rectangle defined by lower-left and upper-right is the base cell, which is replicated eastward (columns) and northward (rows). |
-| [Area By Linear Boundaries](AreaByLinearBoundaries.md) | An area representation encoded as a set of linear boundary representations. |
-| [Area By Multi Polygon](AreaByMultiPolygon.md) | An area representation encoded as a MultiPolygon geometry. |
-| [Area By Polygon](AreaByPolygon.md) | An area representation encoded as a Polygon geometry. |
-| [Area By Rectangle](AreaByRectangle.md) | An area representation encoded as a rectangle, defined by a lower-left corner and an upper-right corner. |
-| [Area Representation](AreaRepresentation.md) | A geometry/representation that encodes an area location using a specific method. |
+| [Area By Circle](AreaByCircle.md) | An area geometry encoded as a circle. |
+| [Area By Code](AreaByCode.md) | An area geometry whose extent is not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Area By Code](AreaByCode.md) | An area geometry whose extent is not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Area By Grid](AreaByGrid.md) | An area geometry encoded as a grid. The rectangle defined by lower-left and upper-right is the base cell, which is replicated eastward (columns) and northward (rows). |
+| [Area By Grid](AreaByGrid.md) | An area geometry encoded as a grid. The rectangle defined by lower-left and upper-right is the base cell, which is replicated eastward (columns) and northward (rows). |
+| [Area By Linear Boundaries](AreaByLinearBoundaries.md) | An area geometry encoded as a set of linear boundary geometries. |
+| [Area By Multi Polygon](AreaByMultiPolygon.md) | An area geometry encoded as a MultiPolygon geometry. |
+| [Area By Polygon](AreaByPolygon.md) | An area geometry encoded as a Polygon geometry. |
+| [Area By Rectangle](AreaByRectangle.md) | An area geometry encoded as a rectangle, defined by a lower-left corner and an upper-right corner. |
+| [Area Geometry](AreaGeometry.md) | A geometry that encodes an area location using a specific method. |
+| [Coded Geometry](CodedGeometry.md) | A geometry whose extent is resolved via an external code, registry, or service (a pointer to a geometry held elsewhere). |
 | [Coordinate Geometry](CoordinateGeometry.md) | A geometry that is represented by a coordinate system (i.e., directly encodes coordinate tuples). |
-| [Itinerary By Waypoints](ItineraryByWaypoints.md) | An itinerary representation encoded as an ordered sequence of locations (waypoints). |
-| [Itinerary Code](ItineraryCode.md) | An itinerary representation encoded as a code that references an entry in an external itinerary/route referencing system. |
-| [Itinerary Representation](ItineraryRepresentation.md) | A geometry/representation that encodes an itinerary using a specific method. |
-| [Linear By Code](LinearByCode.md) | A linear representation encoded as a code that references an entry in an external location referencing system. |
-| [Linear By Linear Ring](LinearByLinearRing.md) | A linear representation encoded as a LinearRing geometry. |
-| [Linear By Line String](LinearByLineString.md) | A linear representation encoded as a LineString geometry. |
-| [Linear By Multi Line String](LinearByMultiLineString.md) | A linear representation encoded as a MultiLineString geometry. |
-| [Linear By Point Representations](LinearByPointRepresentations.md) | A linear representation encoded as an ordered sequence of point representations. |
-| [Linear By Points](LinearByPoints.md) | A linear representation encoded as an ordered sequence of points. |
-| [Linear Representation](LinearRepresentation.md) | A geometry/representation that encodes a linear location using a specific method. |
-| [Point By Code](PointByCode.md) | A point location representation using a code that references an entry in an external location referencing system. |
+| [Itinerary By Waypoints](ItineraryByWaypoints.md) | An itinerary geometry encoded as an ordered sequence of features (waypoints). |
+| [Itinerary Code](ItineraryCode.md) | An itinerary geometry whose route geometry is not modelled here but can be resolved using :hasLookupCode and an external itinerary/route referencing system. |
+| [Itinerary Code](ItineraryCode.md) | An itinerary geometry whose route geometry is not modelled here but can be resolved using :hasLookupCode and an external itinerary/route referencing system. |
+| [Itinerary Geometry](ItineraryGeometry.md) | A geometry that encodes an itinerary using a specific method. |
+| [Linear By Code](LinearByCode.md) | A linear geometry whose extent is not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Linear By Code](LinearByCode.md) | A linear geometry whose extent is not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Linear By Linear Ring](LinearByLinearRing.md) | A linear geometry encoded as a LinearRing geometry. |
+| [Linear By Line String](LinearByLineString.md) | A linear geometry encoded as a LineString geometry. |
+| [Linear By Multi Line String](LinearByMultiLineString.md) | A linear geometry encoded as a MultiLineString geometry. |
+| [Linear By Point Features](LinearByPointFeatures.md) | A linear geometry encoded as an ordered sequence of points. |
+| [Linear By Point Geometries](LinearByPointGeometries.md) | A linear geometry encoded as an ordered sequence of point geometries. |
+| [Linear Geometry](LinearGeometry.md) | A geometry that encodes a linear location using a specific method. |
+| [Point By Code](PointByCode.md) | A point geometry whose coordinates are not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Point By Code](PointByCode.md) | A point geometry whose coordinates are not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
 | [Point By Coordinates](PointByCoordinates.md) | A coordinate tuple defining the geodetic position of a single point location using a known geodetic reference system |
 | [Point By Coordinates](PointByCoordinates.md) | A coordinate tuple defining the geodetic position of a single point location using a known geodetic reference system |
-| [Point By Geo Coordinates](PointByGeoCoordinates.md) | A point location representation encoded as latitude/longitude and optional elements, such as elevation and metadata. |
-| [Point By Linear Position](PointByLinearPosition.md) | A point representation defined by an offset along a linear representation. |
-| [Point By Projected Coordinates](PointByProjectedCoordinates.md) | A point location representation encoded as projected coordinates and optional elements, such as elevation and metadata. |
-| [Point Representation](PointRepresentation.md) | A representation of a point location using a specific method (e.g., coordinates or an external code). |
+| [Point By Geo Coordinates](PointByGeoCoordinates.md) | A point location geometry encoded as latitude/longitude and optional elements, such as elevation and metadata. |
+| [Point By Linear Position](PointByLinearPosition.md) | A point geometry defined by an offset along a linear geometry. |
+| [Point By Projected Coordinates](PointByProjectedCoordinates.md) | A point location geometry encoded as projected coordinates and optional elements, such as elevation and metadata. |
+| [Point Geometry](PointGeometry.md) | A geometry for a point location using a specific method (e.g., coordinates or an external code). |
 
 ## Formalization for Geometry
 

@@ -18,7 +18,7 @@
     dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
     its-core:draft "true" ;
     owl:imports :LocationCorePattern ;
-    owl:imports :LinearReferencingPattern ;
+    owl:imports :LinearPattern ;
     owl:versionInfo "0.0.1" ;
     owl:versionIRI <https://w3id.org/itsdata/location/v1/OpenLRAdapter/r0.1> ;
     vann:preferredNamespacePrefix "its-location" ;
@@ -28,6 +28,6 @@
 
 :OpenLRLocationReference
     a owl:Class ;
-    rdfs:subClassOf :Location ;
+    rdfs:subClassOf :Feature ;
     skos:definition "Placeholder class for OpenLR location references (to be aligned with existing OpenLR pattern)."@en .
 

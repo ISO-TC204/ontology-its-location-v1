@@ -13,7 +13,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 :LocationCoreSHACL
     a owl:Ontology ;
     dcterms:title "SHACL rules for ITS Location Referencing Core"@en ;
-    skos:definition "SHACL shapes for core location domain abstractions (locations, representations, and collections)."@en ;
+    skos:definition "SHACL shapes for core location domain abstractions (features, geometries, coded geometry, and collections)."@en ;
     its-core:draft "true" ;
     dcterms:created "Draft" ;
     dcterms:modified "2026-04-29"^^xsd:date ;
@@ -45,31 +45,15 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         sh:node its-sh:MaxOneMultilingualShape ;
     ] .
 
-:LocationShape
+:CodedGeometryShape
     a sh:NodeShape ;
-    sh:targetClass :Location ;
-    sh:and ( :FeatureShape ) ;
+    sh:targetClass :CodedGeometry ;
+    sh:and ( :GeometryShape ) ;
     sh:property [
-        sh:path :hasPrimaryRepresentation ;
+        sh:path :hasLookupCode ;
         sh:node its-sh:ExactlyOneShape ;
-        sh:class :Geometry ;
-        sh:message "A Location must have exactly one :hasPrimaryRepresentation value." ;
-    ] ;
-    sh:property [
-        sh:path :hasAlternativeRepresentation ;
-        sh:node its-sh:UnlimitedShape ;
-        sh:class :Geometry ;
-    ] .
-
-:LocationGroupShape
-    a sh:NodeShape ;
-    sh:targetClass :LocationGroup ;
-    sh:and ( :FeatureShape ) ;
-    sh:property [
-        sh:path :hasMember ;
-        sh:minCount 2 ;
-        sh:class :Location ;
-        sh:message "A LocationGroup must contain at least two member Locations." ;
+        sh:class :LocationCode ;
+        sh:message "CodedGeometry must have exactly one :hasLookupCode pointing to a LocationCode." ;
     ] .
 
 :CoordinateGeometryShape
@@ -85,4 +69,15 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         sh:path :coordinateEpoch ;
         sh:node its-sh:MaxOneShape ;
         sh:datatype xsd:dateTime ;
+    ] .
+
+:LocationGroupShape
+    a sh:NodeShape ;
+    sh:targetClass :LocationGroup ;
+    sh:and ( :FeatureShape ) ;
+    sh:property [
+        sh:path :hasMember ;
+        sh:minCount 2 ;
+        sh:class :Feature ;
+        sh:message "A LocationGroup must contain at least two member Features." ;
     ] .

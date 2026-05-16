@@ -44,55 +44,55 @@ Parent class for location domain concepts.
 
 | Class | Description |
 |-------|-------------|
-| [Area By Circle](AreaByCircle.md) | An area representation encoded as a circle. |
-| [Area By Code](AreaByCode.md) | An area representation encoded as a code that references an entry in an external location referencing system. |
-| [Area By Code](AreaByCode.md) | An area representation encoded as a code that references an entry in an external location referencing system. |
-| [Area By Grid](AreaByGrid.md) | An area representation encoded as a grid. The rectangle defined by lower-left and upper-right is the base cell, which is replicated eastward (columns) and northward (rows). |
-| [Area By Grid](AreaByGrid.md) | An area representation encoded as a grid. The rectangle defined by lower-left and upper-right is the base cell, which is replicated eastward (columns) and northward (rows). |
-| [Area By Linear Boundaries](AreaByLinearBoundaries.md) | An area representation encoded as a set of linear boundary representations. |
-| [Area By Multi Polygon](AreaByMultiPolygon.md) | An area representation encoded as a MultiPolygon geometry. |
-| [Area By Polygon](AreaByPolygon.md) | An area representation encoded as a Polygon geometry. |
-| [Area By Rectangle](AreaByRectangle.md) | An area representation encoded as a rectangle, defined by a lower-left corner and an upper-right corner. |
-| [Area Location](AreaLocation.md) | A spatial location enclosed within a two-dimensional boundary or boundaries across a defined surface. |
-| [Area Representation](AreaRepresentation.md) | A geometry/representation that encodes an area location using a specific method. |
+| [Area By Circle](AreaByCircle.md) | An area geometry encoded as a circle. |
+| [Area By Code](AreaByCode.md) | An area geometry whose extent is not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Area By Code](AreaByCode.md) | An area geometry whose extent is not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Area By Grid](AreaByGrid.md) | An area geometry encoded as a grid. The rectangle defined by lower-left and upper-right is the base cell, which is replicated eastward (columns) and northward (rows). |
+| [Area By Grid](AreaByGrid.md) | An area geometry encoded as a grid. The rectangle defined by lower-left and upper-right is the base cell, which is replicated eastward (columns) and northward (rows). |
+| [Area By Linear Boundaries](AreaByLinearBoundaries.md) | An area geometry encoded as a set of linear boundary geometries. |
+| [Area By Multi Polygon](AreaByMultiPolygon.md) | An area geometry encoded as a MultiPolygon geometry. |
+| [Area By Polygon](AreaByPolygon.md) | An area geometry encoded as a Polygon geometry. |
+| [Area By Rectangle](AreaByRectangle.md) | An area geometry encoded as a rectangle, defined by a lower-left corner and an upper-right corner. |
+| [Area Feature](AreaFeature.md) | A spatial feature enclosed within a two-dimensional boundary or boundaries across a defined surface. |
+| [Area Geometry](AreaGeometry.md) | A geometry that encodes an area location using a specific method. |
+| [Coded Geometry](CodedGeometry.md) | A geometry whose extent is resolved via an external code, registry, or service (a pointer to a geometry held elsewhere). |
 | [Coordinate Geometry](CoordinateGeometry.md) | A geometry that is represented by a coordinate system (i.e., directly encodes coordinate tuples). |
 | [Coordinate Reference System](CoordinateReferenceSystem.md) | A coordinate reference system (CRS) used to interpret coordinate tuples in a CoordinateGeometry. Typically identified using an OGC CRS IRI such as http://www.opengis.net/def/crs/EPSG/0/4326. |
-| [Distance Accuracy](DistanceAccuracy.md) | A statement of distance accuracy for a point representation. |
+| [Distance Accuracy](DistanceAccuracy.md) | A statement of distance accuracy for a point geometry. |
 | [Elevation](Elevation.md) | An elevation for a point location along with metadata. |
-| [Elevation Accuracy](ElevationAccuracy.md) | A statement of elevation accuracy for a point representation. |
+| [Elevation Accuracy](ElevationAccuracy.md) | A statement of elevation accuracy for a point geometry. |
 | [Elevation Height Code](ElevationHeightCode.md) | A code that identifies the height value for an elevation value  (e.g., 'ground layer 1', 'elevated layer 1', 'elevated layer 2', 'tunnel layer 1'). |
 | [Elevation Reference Code](ElevationReferenceCode.md) | A code that identifies the reference system for an elevation value  (e.g., 'ellipsoidal', 'gravityRelated', 'ground level', 'EPSG:5701', 'coded height'). |
 | [Feature](Feature.md) | An abstraction of real-world phenomena. An ITS-domain feature (subclass of geo:Feature) used to model real-world things that have a spatial location. |
-| [Geometry](Geometry.md) | A description of a spatial location in the real world according to a defined reference system |
-| [Itinerary](Itinerary.md) | An ordered set of multiple physically separate locations forming a route or itinerary. |
-| [Itinerary By Waypoints](ItineraryByWaypoints.md) | An itinerary representation encoded as an ordered sequence of locations (waypoints). |
-| [Itinerary Code](ItineraryCode.md) | An itinerary representation encoded as a code that references an entry in an external itinerary/route referencing system. |
-| [Itinerary Representation](ItineraryRepresentation.md) | A geometry/representation that encodes an itinerary using a specific method. |
-| [Linear By Code](LinearByCode.md) | A linear representation encoded as a code that references an entry in an external location referencing system. |
-| [Linear By Code](LinearByCode.md) | A linear representation encoded as a code that references an entry in an external location referencing system. |
-| [Linear By Linear Ring](LinearByLinearRing.md) | A linear representation encoded as a LinearRing geometry. |
-| [Linear By Line String](LinearByLineString.md) | A linear representation encoded as a LineString geometry. |
-| [Linear By Multi Line String](LinearByMultiLineString.md) | A linear representation encoded as a MultiLineString geometry. |
-| [Linear By Point Representations](LinearByPointRepresentations.md) | A linear representation encoded as an ordered sequence of point representations. |
-| [Linear By Points](LinearByPoints.md) | A linear representation encoded as an ordered sequence of points. |
-| [Linear Location](LinearLocation.md) | A spatial location that extends between two point locations along a defined path |
-| [Linear Representation](LinearRepresentation.md) | A geometry/representation that encodes a linear location using a specific method. |
-| [Location](Location.md) | A particular place or position. |
+| [Geometry](Geometry.md) | A description of a spatial location in the real world according to a defined reference system. |
+| [Itinerary](Itinerary.md) | An ordered set of multiple physically separate features forming a route or itinerary. |
+| [Itinerary By Waypoints](ItineraryByWaypoints.md) | An itinerary geometry encoded as an ordered sequence of features (waypoints). |
+| [Itinerary Code](ItineraryCode.md) | An itinerary geometry whose route geometry is not modelled here but can be resolved using :hasLookupCode and an external itinerary/route referencing system. |
+| [Itinerary Code](ItineraryCode.md) | An itinerary geometry whose route geometry is not modelled here but can be resolved using :hasLookupCode and an external itinerary/route referencing system. |
+| [Itinerary Geometry](ItineraryGeometry.md) | A geometry that encodes an itinerary using a specific method. |
+| [Linear By Code](LinearByCode.md) | A linear geometry whose extent is not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Linear By Code](LinearByCode.md) | A linear geometry whose extent is not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Linear By Linear Ring](LinearByLinearRing.md) | A linear geometry encoded as a LinearRing geometry. |
+| [Linear By Line String](LinearByLineString.md) | A linear geometry encoded as a LineString geometry. |
+| [Linear By Multi Line String](LinearByMultiLineString.md) | A linear geometry encoded as a MultiLineString geometry. |
+| [Linear By Point Features](LinearByPointFeatures.md) | A linear geometry encoded as an ordered sequence of points. |
+| [Linear By Point Geometries](LinearByPointGeometries.md) | A linear geometry encoded as an ordered sequence of point geometries. |
+| [Linear Feature](LinearFeature.md) | A spatial feature that extends along a defined path (typically between two point features or along a network element). |
+| [Linear Geometry](LinearGeometry.md) | A geometry that encodes a linear location using a specific method. |
 | [Location Code](LocationCode.md) | A code that identifies (or can be used to look up) a location in some external referencing system. |
-| [Location Group](LocationGroup.md) | An unordered set of multiple physically separate locations. |
+| [Location Group](LocationGroup.md) | An unordered set of multiple physically separate features (each typically a singular feature with its own geometry). |
 | [Measurement Error Code](MeasurementErrorCode.md) | A code identifying an error condition or qualification for a measurement value. |
 | [Offset Distance](OffsetDistance.md) | An offset distance expressed either as a length or as a percentage. |
-| [Point By Code](PointByCode.md) | A point location representation using a code that references an entry in an external location referencing system. |
-| [Point By Code](PointByCode.md) | A point location representation using a code that references an entry in an external location referencing system. |
+| [Point By Code](PointByCode.md) | A point geometry whose coordinates are not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
+| [Point By Code](PointByCode.md) | A point geometry whose coordinates are not modelled here but can be resolved using :hasLookupCode and an external location referencing system. |
 | [Point By Coordinates](PointByCoordinates.md) | A coordinate tuple defining the geodetic position of a single point location using a known geodetic reference system |
 | [Point By Coordinates](PointByCoordinates.md) | A coordinate tuple defining the geodetic position of a single point location using a known geodetic reference system |
-| [Point By Geo Coordinates](PointByGeoCoordinates.md) | A point location representation encoded as latitude/longitude and optional elements, such as elevation and metadata. |
-| [Point By Linear Position](PointByLinearPosition.md) | A point representation defined by an offset along a linear representation. |
-| [Point By Projected Coordinates](PointByProjectedCoordinates.md) | A point location representation encoded as projected coordinates and optional elements, such as elevation and metadata. |
-| [Point Location](PointLocation.md) | A spatial location with no length in any of the spatial dimensions. |
-| [Point Representation](PointRepresentation.md) | A representation of a point location using a specific method (e.g., coordinates or an external code). |
-| [Position Accuracy](PositionAccuracy.md) | A statement of positional accuracy for a point representation. |
+| [Point By Geo Coordinates](PointByGeoCoordinates.md) | A point location geometry encoded as latitude/longitude and optional elements, such as elevation and metadata. |
+| [Point By Linear Position](PointByLinearPosition.md) | A point geometry defined by an offset along a linear geometry. |
+| [Point By Projected Coordinates](PointByProjectedCoordinates.md) | A point location geometry encoded as projected coordinates and optional elements, such as elevation and metadata. |
+| [Point Feature](PointFeature.md) | A spatial feature with no length in any of the spatial dimensions (a point phenomenon in space). |
+| [Point Geometry](PointGeometry.md) | A geometry for a point location using a specific method (e.g., coordinates or an external code). |
+| [Position Accuracy](PositionAccuracy.md) | A statement of positional accuracy for a point geometry. |
 | [Position Confidence Ellipse](PositionConfidenceEllipse.md) | A confidence ellipse describing uncertainty of a point position in a horizontal plane. |
-| [Spatial Location](SpatialLocation.md) | A location that is represented in three-dimensional space. |
 | [Spatial Object](SpatialObject.md) | A spatial object within the ITS domain (subclass of geo:SpatialObject). |
 

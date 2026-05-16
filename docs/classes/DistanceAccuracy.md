@@ -2,7 +2,7 @@
 
 # DistanceAccuracy
 
-A statement of distance accuracy for a point representation.
+A statement of distance accuracy for a point geometry.
 
 
 ## Diagram
@@ -115,8 +115,8 @@ A statement of distance accuracy for a point representation.
 
 | Class | Description |
 |-------|-------------|
-| [Elevation Accuracy](ElevationAccuracy.md) | A statement of elevation accuracy for a point representation. |
-| [Position Accuracy](PositionAccuracy.md) | A statement of positional accuracy for a point representation. |
+| [Elevation Accuracy](ElevationAccuracy.md) | A statement of elevation accuracy for a point geometry. |
+| [Position Accuracy](PositionAccuracy.md) | A statement of positional accuracy for a point geometry. |
 
 ## Formalization for DistanceAccuracy
 

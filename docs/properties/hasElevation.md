@@ -2,7 +2,7 @@
 
 # hasElevation
 
-Associates a point representation with an elevation value.
+Associates a point geometry with an elevation value.
 
 ## Used in classes
 

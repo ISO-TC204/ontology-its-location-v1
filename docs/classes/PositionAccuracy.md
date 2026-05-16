@@ -2,7 +2,7 @@
 
 # PositionAccuracy
 
-A statement of positional accuracy for a point representation.
+A statement of positional accuracy for a point geometry.
 
 
 ## Diagram

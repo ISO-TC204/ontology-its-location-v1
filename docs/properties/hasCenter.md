@@ -2,7 +2,7 @@
 
 # hasCenter
 
-Center point of a circle area representation.
+Center point of a circle area geometry.
 
 ## Used in classes
 

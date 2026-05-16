@@ -2,7 +2,7 @@
 
 # hasMember
 
-Relates a location group to a member spatial object.
+Relates a location group to a member feature.
 
 ## Used in classes
 

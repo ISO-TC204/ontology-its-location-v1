@@ -1,7 +1,7 @@
 | Concept                    | File                  | Notes                                                      |
 |----------------------------|-----------------------|------------------------------------------------------------|
-| AreaLocation               | Area                  |                                                            |
-| AreaRepresentation         | Area                  |                                                            |
+| AreaFeature                | Area                  |                                                            |
+| AreaGeometry               | Area                  |                                                            |
 | AreaByCircle               | Area                  |                                                            |
 | AreaByCode                 | Area                  |                                                            |
 | AreaByGrid                 | Area                  |                                                            |
@@ -10,11 +10,13 @@
 | AreaByPolygon              | Area                  |                                                            |
 | AreaByRectangle            | Area                  |                                                            |
 | LocationCode               | Core                  |                                                            |
-| Location                   | Core                  | subclass of :SpatialObject                                 |
+| Feature                    | Core                  | merged former :Location; subclass of geo:Feature            |
+| SpatialLocation            | Core                  | spatial phenomenon as a Feature                             |
+| CodedGeometry              | Core                  | Geometry resolved via :hasLookupCode → :LocationCode        |
 | LocationThing              | Core                  | parent for all Location concepts                           |
 | LocationGroup              | Core                  |                                                            |
 | SpatialObject              | Core                  | Subclass of geo:SpatialObject                              |
-| LocationRepresentation     | Core                  |                                                            |
+| Geometry                   | Core                  | (was LocationRepresentation alignment)                    |
 | rdf:langString             | its-sh                | use its-sh shapes for multilingual values                  |
 | TransportNetworkLocation   | its-trans-network     |                                                            |
 | Itinerary                  | Itinerary             | subclass of geo:Feature                                    |
@@ -27,8 +29,8 @@
 | hasDescription             | its-transport-network |                                                            |
 | cdm3:Lane???               | cdm3                  |                                                            |
 | LinearElement              | its-transport-network |                                                            |
-| LinearLocation             | Linear                |                                                            |
-| LinearRepresentation       | Linear                |                                                            |
+| LinearFeature              | Linear                |                                                            |
+| LinearGeometry             | Linear                |                                                            |
 | LinearByPoints             | Linear                |                                                            |
 | LinearByCode               | Linear                |                                                            |
 | LinearByLineString         | Linear                |                                                            |
@@ -37,10 +39,10 @@
 | OffsetDistance             | Linear                | allow i72:Length and i72:Percent from designated reference |
 | PointByLinearPosition      | Linear                |                                                            |
 | ElevationConfidence        | Point                 |                                                            |
-| PointLocation              | Point                 |                                                            |
+| PointFeature               | Point                 |                                                            |
 | PointByCoordinates         | Point                 |                                                            |
 | PointByCode                | Point                 |                                                            |
-| PointRepresentation        | Point                 | subClass of sf:Point                                       |
+| PointGeometry              | Point                 | subClass of sf:Point                                       |
 | PositionAccuracy           | Point                 |                                                            |
 | PositionConfidenceEllipse  | Point                 |                                                            |
 | various properties         | properties            |                                                            |
