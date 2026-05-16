@@ -1,0 +1,33 @@
+// Diagram for PointByLinearPosition
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		PointGeometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointGeometry</TD></TR></TABLE>> URL="../PointGeometry" margin=0]
+	}
+	PointByLinearPosition [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointByLinearPosition</TD></TR></TABLE>> URL="../PointByLinearPosition" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+		LinearGeometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LinearGeometry</TD></TR></TABLE>> URL="../LinearGeometry" margin=0]
+		OffsetDistance [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">OffsetDistance</TD></TR></TABLE>> URL="../OffsetDistance" margin=0]
+		PointFeature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointFeature</TD></TR></TABLE>> URL="../PointFeature" margin=0]
+	}
+	PointByLinearPosition -> PointGeometry [arrowhead=onormal style=solid]
+	PointByLinearPosition -> Invis [style=invis]
+	Invis -> LinearGeometry [style=invis]
+	LinearGeometry -> OffsetDistance [style=invis]
+	OffsetDistance -> PointFeature [style=invis]
+	LinearGeometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LinearGeometry</TD></TR></TABLE>> URL="../LinearGeometry" margin=0]
+	PointByLinearPosition -> LinearGeometry [label=alongLinearGeometry arrowhead=normal style=solid]
+	OffsetDistance [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">OffsetDistance</TD></TR></TABLE>> URL="../OffsetDistance" margin=0]
+	PointByLinearPosition -> OffsetDistance [label=hasOffsetDistance arrowhead=normal style=solid]
+	PointFeature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointFeature</TD></TR></TABLE>> URL="../PointFeature" margin=0]
+	PointByLinearPosition -> PointFeature [label=basePoint arrowhead=normal style=solid]
+	PointByLinearPosition -> PointFeature [label=directionPoint arrowhead=normal style=solid]
+}
