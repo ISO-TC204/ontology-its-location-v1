@@ -49,4 +49,4 @@ This module defines the following properties:
 - [semiMinorAxisLengthErrorCode](../properties/semiMinorAxisLengthErrorCode.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../point-pattern.ttl) and the SHACL [restrictions](../point-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../PointPattern.ttl) and the SHACL [restrictions](../PointSHACL.ttl).

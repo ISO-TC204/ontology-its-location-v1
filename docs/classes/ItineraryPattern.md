@@ -21,4 +21,4 @@ This module defines the following properties:
 - [locationContainedInItinerary](../properties/locationContainedInItinerary.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../itinerary-pattern.ttl) and the SHACL [restrictions](../itinerary-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../ItineraryPattern.ttl) and the SHACL [restrictions](../ItinerarySHACL.ttl).

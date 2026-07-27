@@ -81,6 +81,12 @@
     rdfs:subClassOf its-core:Code ;
     skos:definition "A code that identifies (or can be used to look up) a location in some external referencing system."@en .
 
+:FacilityCode
+    a owl:Class ;
+    rdfs:subClassOf its-core:Code ;
+    skos:definition "A code that identifies a type of facility."@en ;
+    skos:example "surface street, motorway, bus stop, etc."@en .
+
 #################################################################
 # Core properties
 #################################################################

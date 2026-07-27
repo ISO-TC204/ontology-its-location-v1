@@ -7,8 +7,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX cdm1: <https://w3id.org/citydata/part1/v1/>
 PREFIX its-core: <https://w3id.org/itsdata/core/v1/>
-PREFIX its-sh: <https://w3id.org/itsdata/shacl/v1/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vann: <http://purl.org/vocab/vann/>
 
 :LinearSHACL
     a owl:Ontology ;
@@ -17,6 +17,8 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     its-core:draft "true" ;
     dcterms:created "Draft" ;
     dcterms:modified "2026-04-30"^^xsd:date ;
+    vann:preferredNamespaceUri     "https://w3id.org/itsdata/location/v1/";
+    vann:preferredNamespacePrefix  "its-location";
     owl:versionInfo "0.0.1" ;
     owl:versionIRI <LinearSHACL/r0.1> ;
     owl:imports :LocationCoreSHACL ;
@@ -47,7 +49,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     sh:and ( :LinearGeometryShape ) ;
     sh:property [
         sh:path :hasPointList ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
         sh:class :PointFeatureList ;
         sh:message "LinearByPointFeatures must have a single PointFeatureList." ;
     ] .
@@ -58,7 +60,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     sh:and ( :LinearGeometryShape ) ;
     sh:property [
         sh:path :hasPointGeometryList ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
         sh:class :PointGeometryList ;
         sh:message "LinearByPointGeometries must have a single PointGeometryList." ;
     ] .
@@ -68,12 +70,12 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     sh:property [
         sh:path rdf:first ;
         sh:class :PointFeature ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
     ] ;
     sh:property [
         sh:path rdf:rest ;
         sh:or ( [ sh:hasValue rdf:nil ] [ sh:class :PointFeatureList ] ) ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
     ] ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
@@ -84,12 +86,12 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     sh:property [
         sh:path rdf:first ;
         sh:class :PointGeometry ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
     ] ;
     sh:property [
         sh:path rdf:rest ;
         sh:or ( [ sh:hasValue rdf:nil ] [ sh:class :PointGeometryList ] ) ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
     ] ;
     sh:closed true ;
     sh:ignoredProperties ( rdf:type ) ;
@@ -102,14 +104,14 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         [
             sh:property [
                 sh:path :offsetLength ;
-                sh:node its-sh:ExactlyOneShape ;
+                sh:node its-core:ExactlyOneShape ;
                 sh:class cdm1:Length ;
             ]
         ]
         [
             sh:property [
                 sh:path :offsetPercentage ;
-                sh:node its-sh:ExactlyOneShape ;
+                sh:node its-core:ExactlyOneShape ;
                 sh:class cdm1:Ratio ;
             ]
         ]
@@ -122,22 +124,22 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     sh:and ( :PointGeometryShape ) ;
     sh:property [
         sh:path :alongLinearGeometry ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
         sh:class :LinearGeometry ;
     ] ;
     sh:property [
         sh:path :hasOffsetDistance ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
         sh:class :OffsetDistance ;
     ] ;
     sh:property [
         sh:path :basePoint ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
         sh:class :PointFeature ;
     ] ;
     sh:property [
         sh:path :directionPoint ;
-        sh:node its-sh:ExactlyOneShape ;
+        sh:node its-core:ExactlyOneShape ;
         sh:class :PointFeature ;
     ] ;
     sh:sparql [

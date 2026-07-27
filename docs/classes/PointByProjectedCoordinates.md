@@ -35,8 +35,8 @@ A point location geometry encoded as projected coordinates and optional elements
     <g id="a_node2"><a xlink:href="../PointByProjectedCoordinates" xlink:title="&lt;TABLE&gt;">
     <polygon fill="lightgray" stroke="none" points="1,-42.12 1,-58.38 161.25,-58.38 161.25,-42.12 1,-42.12"/>
     <text xml:space="preserve" text-anchor="start" x="2" y="-46.12" font-family="Arial" font-size="12.00">PointByProjectedCoordinates</text>
-    <text xml:space="preserve" text-anchor="start" x="2" y="-29.88" font-family="Arial" font-size="12.00">easting : xsd:decimal</text>
-    <text xml:space="preserve" text-anchor="start" x="2" y="-13.62" font-family="Arial" font-size="12.00">northing : xsd:decimal</text>
+    <text xml:space="preserve" text-anchor="start" x="2" y="-29.88" font-family="Arial" font-size="12.00">easting : xsd:decimal [1]</text>
+    <text xml:space="preserve" text-anchor="start" x="2" y="-13.62" font-family="Arial" font-size="12.00">northing : xsd:decimal [1]</text>
     <polygon fill="none" stroke="black" points="0,-8.62 0,-59.38 162.25,-59.38 162.25,-8.62 0,-8.62"/>
     </a>
     </g>
@@ -62,7 +62,7 @@ A point location geometry encoded as projected coordinates and optional elements
 
 | Property | Constraint |
 |----------|------------|
-| [easting](../properties/easting.md) | datatype xsd:decimal |
-| [northing](../properties/northing.md) | datatype xsd:decimal |
+| [easting](../properties/easting.md) | exactly 1 xsd:decimal |
+| [northing](../properties/northing.md) | exactly 1 xsd:decimal |
 | subClassOf | [PointByCoordinates](PointByCoordinates.md) |
 

@@ -20,5 +20,5 @@ digraph {
 	LinearByPointGeometries -> Invis [style=invis]
 	Invis -> PointGeometryList [style=invis]
 	PointGeometryList [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointGeometryList</TD></TR></TABLE>> URL="../PointGeometryList" margin=0]
-	LinearByPointGeometries -> PointGeometryList [label=hasPointGeometryList arrowhead=normal style=solid]
+	LinearByPointGeometries -> PointGeometryList [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasPointGeometryList</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

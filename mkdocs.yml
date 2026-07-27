@@ -23,26 +23,6 @@ nav:
     - numColumns: properties/numColumns.md
     - numRows: properties/numRows.md
     - radius: properties/radius.md
-- Core Pattern:
-  - Core Pattern Overview: classes/LocationCorePattern.md
-  - Classes:
-    - Coded Geometry: classes/CodedGeometry.md
-    - Coordinate Geometry: classes/CoordinateGeometry.md
-    - Coordinate Reference System: classes/CoordinateReferenceSystem.md
-    - Feature: classes/Feature.md
-    - Geometry: classes/Geometry.md
-    - Location Code: classes/LocationCode.md
-    - Location Group: classes/LocationGroup.md
-    - Location Thing: classes/LocationThing.md
-    - Spatial Object: classes/SpatialObject.md
-  - Properties:
-    - coordinateEpoch: properties/coordinateEpoch.md
-    - geometryOf: properties/geometryOf.md
-    - hasCRS: properties/hasCRS.md
-    - hasLookupCode: properties/hasLookupCode.md
-    - hasMember: properties/hasMember.md
-    - LocationDataProperty: properties/LocationDataProperty.md
-    - LocationObjectProperty: properties/LocationObjectProperty.md
 - Itinerary Pattern:
   - Itinerary Pattern Overview: classes/ItineraryPattern.md
   - Classes:
@@ -78,6 +58,27 @@ nav:
     - hasPointList: properties/hasPointList.md
     - offsetLength: properties/offsetLength.md
     - offsetPercentage: properties/offsetPercentage.md
+- Location Core Pattern:
+  - Location Core Pattern Overview: classes/LocationCorePattern.md
+  - Classes:
+    - Coded Geometry: classes/CodedGeometry.md
+    - Coordinate Geometry: classes/CoordinateGeometry.md
+    - Coordinate Reference System: classes/CoordinateReferenceSystem.md
+    - Facility Code: classes/FacilityCode.md
+    - Feature: classes/Feature.md
+    - Geometry: classes/Geometry.md
+    - Location Code: classes/LocationCode.md
+    - Location Group: classes/LocationGroup.md
+    - Location Thing: classes/LocationThing.md
+    - Spatial Object: classes/SpatialObject.md
+  - Properties:
+    - coordinateEpoch: properties/coordinateEpoch.md
+    - geometryOf: properties/geometryOf.md
+    - hasCRS: properties/hasCRS.md
+    - hasLookupCode: properties/hasLookupCode.md
+    - hasMember: properties/hasMember.md
+    - LocationDataProperty: properties/LocationDataProperty.md
+    - LocationObjectProperty: properties/LocationObjectProperty.md
 - Point Pattern:
   - Point Pattern Overview: classes/PointPattern.md
   - Classes:

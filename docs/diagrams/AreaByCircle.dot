@@ -22,7 +22,7 @@ digraph {
 	Invis -> cdm1_Length [style=invis]
 	cdm1_Length -> PointFeature [style=invis]
 	PointFeature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointFeature</TD></TR></TABLE>> URL="../PointFeature" margin=0]
-	AreaByCircle -> PointFeature [label=hasCenter arrowhead=normal style=solid]
+	AreaByCircle -> PointFeature [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasCenter</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 	cdm1_Length [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">cdm1:Length</TD></TR></TABLE>> URL="https://w3id.org/citydata/part1/v1/Length" margin=0]
-	AreaByCircle -> cdm1_Length [label=radius arrowhead=normal style=solid]
+	AreaByCircle -> cdm1_Length [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">radius</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

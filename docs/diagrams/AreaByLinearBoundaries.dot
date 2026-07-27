@@ -20,6 +20,5 @@ digraph {
 	AreaByLinearBoundaries -> Invis [style=invis]
 	Invis -> LinearFeature [style=invis]
 	LinearFeature [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">LinearFeature</TD></TR></TABLE>> URL="../LinearFeature" margin=0]
-	AreaByLinearBoundaries -> LinearFeature [label="hasLinearBoundary
-1..*" arrowhead=normal style=solid]
+	AreaByLinearBoundaries -> LinearFeature [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasLinearBoundary</TD></TR><TR><TD ALIGN="CENTER">1..*</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

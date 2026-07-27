@@ -31,4 +31,4 @@ This module defines the following properties:
 - [radius](../properties/radius.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../area-pattern.ttl) and the SHACL [restrictions](../area-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../AreaPattern.ttl) and the SHACL [restrictions](../AreaSHACL.ttl).
