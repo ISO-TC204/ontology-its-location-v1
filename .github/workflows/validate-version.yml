@@ -1,59 +1,9 @@
 name: Validate VERSION
 
-# Uses versioning.py from ontology-shared-scripts without vendoring it in git.
-# The script resolves VERSION via Path(__file__).parents[1], so it must run from
-# <repo>/scripts/versioning.py (not from a nested checkout path).
-
 on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
-permissions:
-  contents: read
-
 jobs:
   validate-version:
-    name: validate-version
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout caller repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Checkout shared scripts
-        uses: actions/checkout@v4
-        with:
-          repository: ISO-TC204/ontology-shared-scripts
-          ref: main
-          path: .ontology-shared-scripts
-          sparse-checkout: |
-            scripts
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Fetch base RELEASES and validate
-        env:
-          BASE_REF: ${{ github.base_ref }}
-        run: |
-          set -euo pipefail
-          if [ -z "$BASE_REF" ]; then
-            echo "base_ref is required (must run on a pull_request event)" >&2
-            exit 1
-          fi
-
-          mkdir -p scripts
-          cp .ontology-shared-scripts/scripts/versioning.py scripts/versioning.py
-
-          git fetch --no-tags origin "$BASE_REF"
-          git show "origin/$BASE_REF:RELEASES" > /tmp/RELEASES.base
-          echo "---- base RELEASES (origin/$BASE_REF) ----"
-          cat /tmp/RELEASES.base
-          echo "---- PR VERSION ----"
-          grep -v '^#' VERSION | grep -v '^$' || true
-          SUGGESTED=$(python3 scripts/versioning.py suggest --releases /tmp/RELEASES.base)
-          echo "Suggested next SemVer if you need a bump: $SUGGESTED"
-          python3 scripts/versioning.py validate --releases /tmp/RELEASES.base
+    uses: ISO-TC204/ontology-shared-scripts/.github/workflows/validate-version.yml@main
