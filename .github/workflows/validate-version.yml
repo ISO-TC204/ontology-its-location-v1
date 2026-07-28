@@ -4,6 +4,47 @@ on:
   pull_request:
     types: [opened, synchronize, reopened, ready_for_review]
 
+permissions:
+  contents: read
+
 jobs:
+  check-base-releases:
+    runs-on: ubuntu-latest
+    outputs:
+      has_releases: ${{ steps.check.outputs.has_releases }}
+      has_version: ${{ steps.check.outputs.has_version }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check RELEASES exists on base branch
+        id: check
+        run: |
+          set -euo pipefail
+          BASE_REF="${{ github.base_ref }}"
+          git check-ref-format --branch "$BASE_REF" >/dev/null 2>&1
+          if ! git fetch --no-tags origin \
+            "$BASE_REF:refs/remotes/origin/$BASE_REF"; then
+            echo "Unable to fetch base branch '$BASE_REF' for version validation." >&2
+            exit 1
+          fi
+          if git cat-file -e "origin/$BASE_REF:RELEASES" 2>/dev/null; then
+            echo "has_releases=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_releases=false" >> "$GITHUB_OUTPUT"
+            echo "RELEASES not found on origin/$BASE_REF. Skipping version validation."
+          fi
+
+          if [ -f VERSION ]; then
+            echo "has_version=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_version=false" >> "$GITHUB_OUTPUT"
+            echo "VERSION not found in this branch. Skipping version validation."
+          fi
+
   validate-version:
+    needs: check-base-releases
+    if: needs.check-base-releases.outputs.has_releases == 'true' && needs.check-base-releases.outputs.has_version == 'true'
     uses: ISO-TC204/ontology-shared-scripts/.github/workflows/validate-version.yml@main
