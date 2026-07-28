@@ -25,7 +25,11 @@ jobs:
           set -euo pipefail
           BASE_REF="${{ github.base_ref }}"
           git check-ref-format --branch "$BASE_REF" >/dev/null 2>&1
-          git fetch --no-tags origin "$BASE_REF"
+          if ! git fetch --no-tags origin \
+            "$BASE_REF:refs/remotes/origin/$BASE_REF"; then
+            echo "Unable to fetch base branch '$BASE_REF' for version validation." >&2
+            exit 1
+          fi
           if git cat-file -e "origin/$BASE_REF:RELEASES" 2>/dev/null; then
             echo "has_releases=true" >> "$GITHUB_OUTPUT"
           else
