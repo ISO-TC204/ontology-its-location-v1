@@ -20,5 +20,5 @@ digraph {
 	ItineraryByWaypoints -> Invis [style=invis]
 	Invis -> FeatureList [style=invis]
 	FeatureList [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">FeatureList</TD></TR></TABLE>> URL="../FeatureList" margin=0]
-	ItineraryByWaypoints -> FeatureList [label=hasWaypointList arrowhead=normal style=solid]
+	ItineraryByWaypoints -> FeatureList [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasWaypointList</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

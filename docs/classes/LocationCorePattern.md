@@ -13,6 +13,7 @@ This pattern consists of the following classes:
 - [Coded Geometry](CodedGeometry.md)
 - [Coordinate Geometry](CoordinateGeometry.md)
 - [Coordinate Reference System](CoordinateReferenceSystem.md)
+- [Facility Code](FacilityCode.md)
 - [Feature](Feature.md)
 - [Geometry](Geometry.md)
 - [Location Code](LocationCode.md)
@@ -30,4 +31,4 @@ This module defines the following properties:
 - [LocationObjectProperty](../properties/LocationObjectProperty.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../core-pattern.ttl) and the SHACL [restrictions](../core-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../LocationCorePattern.ttl) and the SHACL [restrictions](../LocationCoreSHACL.ttl).

@@ -20,5 +20,5 @@ digraph {
 	LinearByPointFeatures -> Invis [style=invis]
 	Invis -> PointFeatureList [style=invis]
 	PointFeatureList [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointFeatureList</TD></TR></TABLE>> URL="../PointFeatureList" margin=0]
-	LinearByPointFeatures -> PointFeatureList [label=hasPointList arrowhead=normal style=solid]
+	LinearByPointFeatures -> PointFeatureList [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasPointList</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

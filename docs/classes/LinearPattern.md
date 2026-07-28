@@ -35,4 +35,4 @@ This module defines the following properties:
 - [offsetPercentage](../properties/offsetPercentage.md)
 
 
-The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../linear-pattern.ttl) and the SHACL [restrictions](../linear-shacl.ttl).
+The formal definition of this pattern is available in TURTLE Syntax in two files, the [core semantics](../LinearPattern.ttl) and the SHACL [restrictions](../LinearSHACL.ttl).

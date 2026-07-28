@@ -7,7 +7,7 @@ digraph {
 		rank=source
 		Geometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">Geometry</TD></TR></TABLE>> URL="../Geometry" margin=0]
 	}
-	CoordinateGeometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CoordinateGeometry</TD></TR><TR><TD ALIGN="LEFT">coordinateEpoch : xsd:dateTime</TD></TR></TABLE>> URL="../CoordinateGeometry" margin=0]
+	CoordinateGeometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CoordinateGeometry</TD></TR><TR><TD ALIGN="LEFT">coordinateEpoch : xsd:dateTime [0..1]</TD></TR></TABLE>> URL="../CoordinateGeometry" margin=0]
 	{
 		rank=max
 	}
@@ -20,5 +20,5 @@ digraph {
 	CoordinateGeometry -> Invis [style=invis]
 	Invis -> CoordinateReferenceSystem [style=invis]
 	CoordinateReferenceSystem [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CoordinateReferenceSystem</TD></TR></TABLE>> URL="../CoordinateReferenceSystem" margin=0]
-	CoordinateGeometry -> CoordinateReferenceSystem [label=hasCRS arrowhead=normal style=solid]
+	CoordinateGeometry -> CoordinateReferenceSystem [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">hasCRS</TD></TR><TR><TD ALIGN="CENTER">1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

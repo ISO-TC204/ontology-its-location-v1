@@ -20,5 +20,5 @@ digraph {
 	PointFeature -> Invis [style=invis]
 	Invis -> "its-core_Bearing" [style=invis]
 	"its-core_Bearing" [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">its-core:Bearing</TD></TR></TABLE>> URL="https://w3id.org/itsdata/core/v1/Bearing" margin=0]
-	PointFeature -> "its-core_Bearing" [label=bearing arrowhead=normal style=solid]
+	PointFeature -> "its-core_Bearing" [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" BGCOLOR="white"><TR><TD ALIGN="CENTER">bearing</TD></TR><TR><TD ALIGN="CENTER">0..1</TD></TR></TABLE>> arrowhead=normal style=solid]
 }

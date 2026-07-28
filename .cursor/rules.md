@@ -31,10 +31,11 @@ You are an expert ontology engineer specializing in large-scale, modular, intern
   - Ontologies frequently refer to concepts defined in other namespaces
 - File organization for this project:
   - This is a Materials for MkDocs project; ontology files are in the `docs/` directory
-  - The project contains one master ontology file; its name is the preferred prefix of the ontology with a ttl extension (e.g., its-time.ttl). This file imports core.ttl and the other pattern -pattern.ttl files.
-  - the project includes core.ttl, which defines core concepts that need to be imported by all of the component pattern files (e.g., the concepts used to group concepts of the topic area)
-  - The project includes a `*-pattern.ttl` file for each pattern (i.e., subset of concepts) within the topic area
-  - A separate `*-shacl.ttl` file for each `-*pattern.ttl` file that defines specific validation rules that apply
+  - The project contains one master ontology file; its name is the preferred prefix of the ontology with a ttl extension (e.g., `its-location.ttl`). This file imports the pattern modules.
+  - Ontology module filenames use **UpperCamelCase** matching the local name of the `owl:Ontology` resource (e.g., `LocationCorePattern.ttl`, `PointSHACL.ttl`) rather than kebab-case, to facilitate htaccess mapping from ontology IRIs to files
+  - The project includes `LocationCorePattern.ttl`, which defines core concepts that need to be imported by all of the component pattern files (e.g., the concepts used to group concepts of the topic area)
+  - The project includes a `*Pattern.ttl` file for each pattern (i.e., subset of concepts) within the topic area
+  - A separate `*SHACL.ttl` file for each pattern that defines specific validation rules that apply
   - A topic area `-reqview.ttl` file that adds annotation properties to each concept to allow synchronizing information stored in ReqView
   - A `properties/` subfolder for property documentation
 
