@@ -17,11 +17,12 @@
     skos:definition "Core abstractions for spatial concepts, including features, geometries, and feature collections used across multiple location-referencing methodologies."@en ;
     dcterms:creator "Kenneth Vaughn" ;
     dcterms:created "Draft" ;
-    dcterms:modified "2026-04-29"^^xsd:date ;
+    dcterms:modified "2026-07-28"^^xsd:date ;
     dcterms:license "http://creativecommons.org/licenses/by/4.0/" ;
     its-core:draft "true" ;
-    owl:versionInfo "0.0.1" ;
-    owl:versionIRI <https://w3id.org/itsdata/location/v1/LocationCorePattern/r0.1> ;
+    owl:versionInfo "0.0.3-alpha.1" ;
+    owl:versionIRI <https://w3id.org/itsdata/location/v1/0.0.3-alpha.1> ;
+    owl:priorVersion               <https://w3id.org/itsdata/location/v1/0.0.2> ;
     vann:preferredNamespacePrefix "its-location" ;
     vann:preferredNamespaceUri "https://w3id.org/itsdata/location/v1/" ;
     owl:imports its-core: .

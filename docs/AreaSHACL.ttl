@@ -15,11 +15,12 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     skos:definition "SHACL shapes for area-based locations and area geometries."@en ;
     its-core:draft "true" ;
     dcterms:created "Draft" ;
-    dcterms:modified "2026-05-01"^^xsd:date ;
+    dcterms:modified "2026-07-28"^^xsd:date ;
     vann:preferredNamespaceUri     "https://w3id.org/itsdata/location/v1/";
     vann:preferredNamespacePrefix  "its-location";
-    owl:versionInfo "0.0.1" ;
-    owl:versionIRI <AreaSHACL/r0.1> ;
+    owl:versionInfo "0.0.3-alpha.1" ;
+    owl:versionIRI <https://w3id.org/itsdata/location/v1/0.0.3-alpha.1> ;
+    owl:priorVersion               <https://w3id.org/itsdata/location/v1/0.0.2> ;
     owl:imports :LocationCoreSHACL ;
     owl:imports :LinearSHACL .
 

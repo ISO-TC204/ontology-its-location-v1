@@ -13,10 +13,10 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     skos:definition "SHACL adapter stub for OpenLR alignment. Existing OpenLR SHACL files are unchanged."@en ;
     its-core:draft "true" ;
     dcterms:created "Draft" ;
-    dcterms:modified "2026-04-23"^^xsd:date ;
-    owl:versionInfo "0.0.1" ;
-    owl:versionIRI <OpenLRAdapterSHACL/r0.1> .
-
+    dcterms:modified "2026-07-28"^^xsd:date ;
+    owl:versionInfo "0.0.3-alpha.1" ;
+    owl:versionIRI <https://w3id.org/itsdata/location/v1/0.0.3-alpha.1> ;
+    owl:priorVersion               <https://w3id.org/itsdata/location/v1/0.0.2> .
 :OpenLRLocationReferenceShape
     a sh:NodeShape ;
     sh:targetClass :OpenLRLocationReference .

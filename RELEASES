@@ -3,3 +3,4 @@
 # SemVer ordering determines the latest ontology version; dates are YYYY-MM-DD.
 0.0.1 2025-11-09 ontology
 0.0.2 2026-05-01 ontology
+0.0.3-alpha.1 2026-07-28 ontology
