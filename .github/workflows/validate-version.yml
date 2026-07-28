@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       has_releases: ${{ steps.check.outputs.has_releases }}
+      has_version: ${{ steps.check.outputs.has_version }}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -31,7 +32,14 @@ jobs:
             echo "RELEASES not found on origin/$BASE_REF. Skipping version validation."
           fi
 
+          if [ -f VERSION ]; then
+            echo "has_version=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_version=false" >> "$GITHUB_OUTPUT"
+            echo "VERSION not found in this branch. Skipping version validation."
+          fi
+
   validate-version:
     needs: check-base-releases
-    if: needs.check-base-releases.outputs.has_releases == 'true'
+    if: needs.check-base-releases.outputs.has_releases == 'true' && needs.check-base-releases.outputs.has_version == 'true'
     uses: ISO-TC204/ontology-shared-scripts/.github/workflows/validate-version.yml@main
