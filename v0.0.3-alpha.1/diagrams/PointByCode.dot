@@ -1,0 +1,21 @@
+// Diagram for PointByCode
+digraph {
+	graph [overlap=false rankdir=TB splines=true]
+	node [fontname=Arial fontsize=12 margin=0 shape=none]
+	edge [fontname=Arial fontsize=11]
+	{
+		rank=source
+		CodedGeometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">CodedGeometry</TD></TR></TABLE>> URL="../CodedGeometry" margin=0]
+		PointGeometry [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointGeometry</TD></TR></TABLE>> URL="../PointGeometry" margin=0]
+	}
+	PointByCode [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD BGCOLOR="lightgray" ALIGN="CENTER">PointByCode</TD></TR></TABLE>> URL="../PointByCode" margin=0]
+	{
+		rank=max
+	}
+	subgraph cluster_associated {
+		label="" style=invis
+		Invis [label=<<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1"><TR><TD></TD></TR></TABLE>> margin=0 style=invis]
+	}
+	PointByCode -> CodedGeometry [arrowhead=onormal style=solid]
+	PointByCode -> PointGeometry [arrowhead=onormal style=solid]
+}
