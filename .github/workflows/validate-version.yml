@@ -1,8 +1,8 @@
 name: Validate VERSION
 
-# Uses versioning.py from ontology-shared-scripts (do not vendor a local copy).
-# The reusable workflow's workflow_ref resolution checks out the *caller* repo's
-# scripts/, which fails when this repo has no local scripts/ directory.
+# Uses versioning.py from ontology-shared-scripts without vendoring it in git.
+# The script resolves VERSION via Path(__file__).parents[1], so it must run from
+# <repo>/scripts/versioning.py (not from a nested checkout path).
 
 on:
   pull_request:
@@ -44,14 +44,16 @@ jobs:
             echo "base_ref is required (must run on a pull_request event)" >&2
             exit 1
           fi
+
+          mkdir -p scripts
+          cp .ontology-shared-scripts/scripts/versioning.py scripts/versioning.py
+
           git fetch --no-tags origin "$BASE_REF"
           git show "origin/$BASE_REF:RELEASES" > /tmp/RELEASES.base
           echo "---- base RELEASES (origin/$BASE_REF) ----"
           cat /tmp/RELEASES.base
           echo "---- PR VERSION ----"
           grep -v '^#' VERSION | grep -v '^$' || true
-          SUGGESTED=$(python3 .ontology-shared-scripts/scripts/versioning.py suggest \
-            --releases /tmp/RELEASES.base)
+          SUGGESTED=$(python3 scripts/versioning.py suggest --releases /tmp/RELEASES.base)
           echo "Suggested next SemVer if you need a bump: $SUGGESTED"
-          python3 .ontology-shared-scripts/scripts/versioning.py validate \
-            --releases /tmp/RELEASES.base
+          python3 scripts/versioning.py validate --releases /tmp/RELEASES.base
