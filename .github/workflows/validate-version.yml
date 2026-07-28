@@ -24,6 +24,7 @@ jobs:
         run: |
           set -euo pipefail
           BASE_REF="${{ github.base_ref }}"
+          git check-ref-format --branch "$BASE_REF" >/dev/null 2>&1
           git fetch --no-tags origin "$BASE_REF"
           if git cat-file -e "origin/$BASE_REF:RELEASES" 2>/dev/null; then
             echo "has_releases=true" >> "$GITHUB_OUTPUT"
